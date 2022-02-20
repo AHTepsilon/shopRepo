@@ -4,51 +4,137 @@ $whiteCol: #FFFFFF;
 $lightGrayCol: #F1F1F1;
 $darkGrayCol: #6C6C6C;
 
-@mixin inlineBlock
-{
+@mixin inlineBlock{
     display: flex;
     flex-direction: row;
 }
 
-@mixin dropdownExpand
-{
+@mixin keepInCenter{
+    margin: auto;
+    justify-content: center;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+}
+
+@mixin dropdownExpand{
+
     display: none;
 
-    &:hover
-    {
+    &:hover{
         display: block;
     }
 }
 
-body
-{
+body{
 
 }
 
-header
-{
+.section__search_by_category{
     background-color: $yellowCol;
+    color:$blackCol;
+    @include keepInCenter();
+}
 
-    nav
-    {
+h2{
+    font-family: 'Bakbak One', cursive;
+}
+
+p{
+    font-family: 'Baloo Tammudu 2', cursive;
+}
+
+.section__new_deals{
+    background-color: $blackCol;
+    color: $yellowCol;
+    @include keepInCenter();
+}
+
+.section__search_by_category_logos_group{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    padding: 20px 100px;
+}
+
+.manufacturer_hyperlink{
+    background-color: $blackCol;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 30px;
+    padding: 20px;
+    border-radius: 100%;
+}
+
+.bombhead__logo{
+    position:fixed;
+}
+
+.slider__img_1{
+    position: absolute;
+    width: 100%;
+    height: 429px;
+    left: 0px;
+    top: 86px;
+    margin-top: 30px;
+
+    background: linear-gradient(0deg, #000000 0%, rgba(0, 0, 0, 0) 67.98%),
+}
+
+.footer_section_1{
+    background-color: $lightGrayCol;
+    @include keepInCenter();
+    flex-direction: row;
+}
+
+#footer_section_1_text_left{
+    text-align: center;
+    margin: 50px;
+    line-height: 30px;
+    color: $blackCol;
+}
+
+#footer_section_1_text_right{
+    text-align: center;
+    margin: 50px;
+    line-height: 30px;
+    color: $blackCol;
+}
+
+.footer_section_2{
+    background-color: $darkGrayCol;
+    @include keepInCenter();
+    color: $whiteCol;
+    padding-top: 20px;
+}
+
+.social_media_hyperlink{
+    margin: 6px;
+}
+
+header{
+    background-color: $yellowCol;
+    width: 100%;
+}
+
+
+nav{
+    @include inlineBlock();
+    font-family: 'Baloo Tammudu 2', cursive;
+
+    .navbar__catDeals__categories{
         @include inlineBlock();
+        @include dropdownExpand();
+    }
 
-        .navbar__catDeals__categories
-        {
-            @include inlineBlock();
-            @include dropdownExpand();
-        }
+    .navbar__catDeals__newDeals{
+        @include inlineBlock();
+        @include dropdownExpand();
+    }
 
-        .navbar__catDeals__newDeals
-        {
-            @include inlineBlock();
-            @include dropdownExpand();
-        }
-
-        .navbar__icons
-        {
-            @include inlineBlock();
-            @include dropdownExpand();
-        }
+    .navbar__icons{
+        @include inlineBlock();
     }
 }
