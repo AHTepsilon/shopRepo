@@ -4,40 +4,52 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Test Github</title>
+    <title>BOMBHEAD | Quality guitars at the best price</title>
     <link rel="stylesheet" href="styles/index.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bakbak+One&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/mediaqueries.css">
 </head>
 <body>
     <header>
         <nav>
-            <img src="img/logos/Logo.png" class="bombhead__logo">
-            <ul class="navbar__catDeals">
-                <li>Categories
-                    <ul class="navbar__catDeals__categories">
-                        <li><a href="">Guitars</a></li>
-                        <li><a href="">Basses</a></li>
-                        <li><a href="">Accoustic Guitars</a></li>
-                        <li><a href="">Amps</a></li>
-                        <li><a href="">Accesories</a></li>
-                    </ul>
-                </li>
-                <li>New Deals 
-                    <ul class="navbar__catDeals__newDeals">
-                        <li><a href="">Daily Offers</a></li>
-                        <li><a href="">Seasonal Offers</a></li>
-                    </ul>
-                </li>
-            </ul>
-            <input type="search">
-            <ul class="navbar__icons">
-                <li><button><img src="img/icons/shopping_cart.png"></button></li>
-                <li><button><img src="img/icons/notification/notif_icon.png"></button></li>
-                <li><button><img src="img/icons/user/user_icon.png"></button></li>
-            </ul>
+            <div class="navbar_logo_div">
+                <img src="img/logos/Logo.png" class="bombhead__logo">
+            </div>
+
+            <div class="catDeals_div">
+                <ul class="navbar__catDeals">
+                    <li>Categories
+                        <ul class="navbar__catDeals__categories">
+                            <li><a href="">Guitars</a></li>
+                            <li><a href="">Basses</a></li>
+                            <li><a href="">Accoustic Guitars</a></li>
+                            <li><a href="">Amps</a></li>
+                            <li><a href="">Accesories</a></li>
+                        </ul>
+                    </li>
+                    <li>New Deals 
+                        <ul class="navbar__catDeals__newDeals">
+                            <li><a href="">Daily Offers</a></li>
+                            <li><a href="">Seasonal Offers</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="navbar_search_div">
+                <input type="search">
+            </div>
+
+            <div class="navbar_icons_div">
+                <ul class="navbar__icons">
+                    <li><button><img src="img/icons/shopping_cart.png"></button></li>
+                    <li><button><img src="img/icons/notification/notif_icon.png"></button></li>
+                    <li><button><img src="img/icons/user/user_icon.png"></button></li>
+                </ul>
+            </div>
         </nav>
     </header>
 
@@ -65,11 +77,13 @@
         <h2 id="section__new_deals_title">New Deals</h2>
 
         <div class="section__new_deals_div">
-            <div class="section__new_deals_div_product_showcase">
-                <img src="img/products/lespaul1.png" alt="">
-                <h2 class="product_price">$299.99</h3>
-                <p class="product_name">Gibson Junior Les Paul Solid Color</p>
-            </div>
+            <a href = " ">
+                <div class="section__new_deals_div_product_showcase">
+                    <img src="img/products/lespaul1.png" alt="">
+                    <h2 class="product_price">$299.99</h3>
+                    <p class="product_name">Gibson Junior Les Paul Solid Color</p>
+                </div>
+            </a>
         </div>
     </section>
 

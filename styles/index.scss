@@ -83,42 +83,43 @@ p{
     background: linear-gradient(0deg, #000000 0%, rgba(0, 0, 0, 0) 67.98%),
 }
 
-.footer_section_1{
-    background-color: $lightGrayCol;
-    @include keepInCenter();
-    flex-direction: row;
-}
-
-#footer_section_1_text_left{
-    text-align: center;
-    margin: 50px;
-    line-height: 30px;
-    color: $blackCol;
-}
-
-#footer_section_1_text_right{
-    text-align: center;
-    margin: 50px;
-    line-height: 30px;
-    color: $blackCol;
-}
-
-.footer_section_2{
-    background-color: $darkGrayCol;
-    @include keepInCenter();
-    color: $whiteCol;
-    padding-top: 20px;
-}
-
-.social_media_hyperlink{
-    margin: 6px;
-}
-
 header{
     background-color: $yellowCol;
     width: 100%;
 }
 
+footer{
+    .footer_section_1{
+        background-color: $lightGrayCol;
+        @include keepInCenter();
+        flex-direction: row;
+    }
+    
+    #footer_section_1_text_left{
+        text-align: center;
+        margin: 50px;
+        line-height: 30px;
+        color: $blackCol;
+    }
+    
+    #footer_section_1_text_right{
+        text-align: center;
+        margin: 50px;
+        line-height: 30px;
+        color: $blackCol;
+    }
+    
+    .footer_section_2{
+        background-color: $darkGrayCol;
+        @include keepInCenter();
+        color: $whiteCol;
+        padding-top: 20px;
+
+        .social_media_hyperlink{
+            margin: 6px;
+        }
+    }
+}
 
 nav{
     @include inlineBlock();
