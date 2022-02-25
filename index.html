@@ -19,9 +19,9 @@
                 <img src="img/logos/Logo.png" class="bombhead__logo">
             </div>
 
-            <div class="catDeals_div">
-                <ul class="navbar__catDeals">
-                    <li>Categories
+            <div class="catDeals__div">
+                <ul class="navbar__catDeals catDeals_item">
+                    <li class="navbar__cat__label">Categories
                         <ul class="navbar__catDeals__categories">
                             <li><a href="">Guitars</a></li>
                             <li><a href="">Basses</a></li>
@@ -30,7 +30,7 @@
                             <li><a href="">Accesories</a></li>
                         </ul>
                     </li>
-                    <li>New Deals 
+                    <li class="navbar__deals__label catDeals_item">New Deals 
                         <ul class="navbar__catDeals__newDeals">
                             <li><a href="">Daily Offers</a></li>
                             <li><a href="">Seasonal Offers</a></li>
@@ -40,7 +40,7 @@
             </div>
 
             <div class="navbar_search_div">
-                <input type="search">
+                <input type="search" class="navbar_search">
             </div>
 
             <div class="navbar_icons_div">
@@ -53,11 +53,15 @@
         </nav>
     </header>
 
-    <!--<section>
+    <section class="slider">
+        <div class="slider__text">
+            <h1 class="slider__text__title">Excellent Guitars!</h1>
+            <p class="slider__text__paragraph">BOMBHEAD Guitars offers some of the best guitars and bass guitars available at the best price. If you’re looking for some of the highest quality gear but you’re on a budget, don’t worry! This is the place for you!</p>
+        </div>
         <img src="./img/header_guitarrist.png" alt="header guitarrist img" class="slider__img_1">
-    </section>-->
+    </section>
 
-    <section class="section__search_by_category">
+    <section class="section__search_by_category section__padding">
         <h2 id="section__search_by_category_title">Search by Manufacturer</h2>
         
         <div class="section__search_by_category_logos_group">
@@ -73,15 +77,26 @@
         </div>
     </section>
 
-    <section class="section__new_deals">
+    <section class="section__new_deals section__padding">
         <h2 id="section__new_deals_title">New Deals</h2>
 
         <div class="section__new_deals_div">
             <a href = " ">
                 <div class="section__new_deals_div_product_showcase">
-                    <img src="img/products/lespaul1.png" alt="">
-                    <h2 class="product_price">$299.99</h3>
-                    <p class="product_name">Gibson Junior Les Paul Solid Color</p>
+                    <div class="product_1">
+                        <div class="section__new_deals_div_product_showcase_text">
+                            <h2 class="product_price_1">$299.99</h3>
+                            <p class="product_name_1">Gibson Junior Les Paul Solid Color</p>
+                        </div>
+                        <img src="img/products/lespaul1.png" alt="" class="guitarPhoto">
+                    </div>
+                    <div class="product_2">
+                        <div class="section__new_deals_div_product_showcase_text">
+                            <h2 class="product_price_2">$399.99</h3>
+                            <p class="product_name_2">Epiphone Les Paul - White or Black</p>
+                        </div>
+                        <img src="img/products/lespaul2.png" alt="" class="guitarPhoto">
+                    </div>
                 </div>
             </a>
         </div>
