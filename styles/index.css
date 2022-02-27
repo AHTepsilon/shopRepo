@@ -25,7 +25,7 @@
 }
 
 .section__search_by_category_logos_group {
-  width: 1240px;
+  /*width: 1240px;*/
 }
 
 h2 {
@@ -73,12 +73,15 @@ p {
           flex-direction: row;
 }
 
+.section__new_deals_div_product_showcase .product {
+  margin: 0 15px;
+}
+
 .section__new_deals_div_product_showcase_text {
   position: absolute;
-  width: 55%;
+  /*width: 55%;*/
   bottom: 10px;
   text-align: center;
-  left: 18px;
   text-decoration: none;
   color: #FFE70C;
 }
@@ -95,6 +98,24 @@ p {
   font-weight: lighter;
 }
 
+.section__new_deals_div_product_showcase .product_price_3 {
+  font-size: 32px;
+  width: 140px;
+  font-weight: lighter;
+}
+
+.section__new_deals_div_product_showcase .product_price_4 {
+  font-size: 32px;
+  width: 140px;
+  font-weight: lighter;
+}
+
+.section__new_deals_div_product_showcase .product_price_5 {
+  font-size: 32px;
+  width: 140px;
+  font-weight: lighter;
+}
+
 .section__new_deals_div_product_showcase .product_name_1 {
   line-height: 20px;
   width: 140px;
@@ -102,6 +123,24 @@ p {
 }
 
 .section__new_deals_div_product_showcase .product_name_2 {
+  line-height: 20px;
+  width: 140px;
+  font-size: 12px;
+}
+
+.section__new_deals_div_product_showcase .product_name_3 {
+  line-height: 20px;
+  width: 140px;
+  font-size: 12px;
+}
+
+.section__new_deals_div_product_showcase .product_name_4 {
+  line-height: 20px;
+  width: 140px;
+  font-size: 12px;
+}
+
+.section__new_deals_div_product_showcase .product_name_5 {
   line-height: 20px;
   width: 140px;
   font-size: 12px;
@@ -128,6 +167,104 @@ p {
       -ms-flex-pack: center;
           justify-content: center;
   padding: 20px 100px;
+}
+
+.section__meet_your_match {
+  margin: auto;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #FFFFFF;
+}
+
+.section__meet_your_match .form_title {
+  margin-bottom: 10px;
+}
+
+.section__meet_your_match_form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.section__meet_your_match_form .mym_form_1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 0 20px;
+}
+
+.section__meet_your_match_form .mym_form_1 .price_range_div {
+  margin-top: 2px;
+}
+
+.section__meet_your_match_form .mym_form_1 .price_range_div .range_price {
+  width: 50px;
+}
+
+.section__meet_your_match_form .mym_form_2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 0 20px;
+}
+
+.section__join_newsletter {
+  margin: auto;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #FFE70C;
+}
+
+.section__join_newsletter .form_title {
+  margin-bottom: 10px;
+}
+
+.section__join_newsletter_form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.submit_button {
+  margin: 20px;
 }
 
 .manufacturer_hyperlink {
@@ -271,6 +408,9 @@ nav {
       -ms-flex-pack: justify;
           justify-content: space-between;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 nav .navbar__catDeals {

@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="styles/mediaqueries.css">
 </head>
 <body>
-    <header>
+    <header> <!--Header / navigation bar-->
         <nav>
             <div class="navbar_logo_div">
                 <img src="img/logos/Logo.png" class="bombhead__logo">
@@ -53,7 +53,7 @@
         </nav>
     </header>
 
-    <section class="slider">
+    <section class="slider"> <!--images slider / main image-->
         <div class="slider__text">
             <h1 class="slider__text__title">Excellent Guitars!</h1>
             <p class="slider__text__paragraph">BOMBHEAD Guitars offers some of the best guitars and bass guitars available at the best price. If you’re looking for some of the highest quality gear but you’re on a budget, don’t worry! This is the place for you!</p>
@@ -61,7 +61,7 @@
         <img src="./img/header_guitarrist.png" alt="header guitarrist img" class="slider__img_1">
     </section>
 
-    <section class="section__search_by_category section__padding">
+    <section class="section__search_by_category section__padding"> <!--Collection of logo hyperlinks-->
         <h2 id="section__search_by_category_title">Search by Manufacturer</h2>
         
         <div class="section__search_by_category_logos_group">
@@ -77,32 +77,129 @@
         </div>
     </section>
 
-    <section class="section__new_deals section__padding">
+    <section class="section__new_deals section__padding"> <!--New deals section-->
         <h2 id="section__new_deals_title">New Deals</h2>
 
         <div class="section__new_deals_div">
             <a href = " ">
                 <div class="section__new_deals_div_product_showcase">
-                    <div class="product_1">
+                    <div class="product_1 product">
                         <div class="section__new_deals_div_product_showcase_text">
                             <h2 class="product_price_1">$299.99</h3>
                             <p class="product_name_1">Gibson Junior Les Paul Solid Color</p>
                         </div>
                         <img src="img/products/lespaul1.png" alt="" class="guitarPhoto">
                     </div>
-                    <div class="product_2">
+                    <div class="product_2 product">
                         <div class="section__new_deals_div_product_showcase_text">
                             <h2 class="product_price_2">$399.99</h3>
                             <p class="product_name_2">Epiphone Les Paul - White or Black</p>
                         </div>
                         <img src="img/products/lespaul2.png" alt="" class="guitarPhoto">
                     </div>
+                    <div class="product_3 product">
+                        <div class="section__new_deals_div_product_showcase_text">
+                            <h2 class="product_price_3">$159.99</h3>
+                            <p class="product_name_3">Epiphone Les Paul Special Satin E1 - Black</p>
+                        </div>
+                        <img src="img/products/lespaul3.png" alt="" class="guitarPhoto">
+                    </div>
+                    <div class="product_4 product">
+                        <div class="section__new_deals_div_product_showcase_text">
+                            <h2 class="product_price_4">$159.99</h3>
+                            <p class="product_name_4">Squier Affinity Telecaster - Sunburst</p>
+                        </div>
+                        <img src="img/products/telecaster1.png" alt="" class="guitarPhoto">
+                    </div>
+                    <div class="product_5 product">
+                        <div class="section__new_deals_div_product_showcase_text">
+                            <h2 class="product_price_5">$199.99</h3>
+                            <p class="product_name_5">Ibanez AX120 - Solid Colors with Maple</p>
+                        </div>
+                        <img src="img/products/AX120.png" alt="" class="guitarPhoto">
+                    </div>
                 </div>
             </a>
         </div>
     </section>
 
-    <footer>
+    <section class="section__meet_your_match section__padding"> <!--Meet your match form-->
+        <h2 class="form_title">Meet your Match</h2>
+
+        <form action="" class="section__meet_your_match_form">
+
+            <div class="mym_form_1">
+                Instrument <select name="" id="">
+                    <option value="">Guitars</option>
+                    <option value="">Basses</option>
+                </select>
+    
+                Manufacturer <select name="" id="">
+                    <option value="fender">Fender</option>
+                    <option value="gibson">Gibson</option>
+                    <option value="ibanez">Ibanez</option>
+                    <option value="epiphone">Epiphone</option>
+                    <option value="squier">Squier</option>
+                    <option value="peavey">Peavey</option>
+                    <option value="rickenbacker">Rickenbacker</option>
+                    <option value="jackson">Jackson</option>
+                    <option value="ernie_ball">Ernie Ball</option>
+                </select>
+    
+                Body <select name="" id="">
+                    <option value="">Stratocaster</option>
+                    <option value="">Les Paul</option>
+                    <option value="">Telecaster</option>
+                    <option value="">Offset</option>
+                    <option value="">SG</option>
+                    <option value="">Others (Guitars)</option>
+                    <option value="">Doublecut</option>
+                    <option value="">Jazz</option>
+                    <option value="">Precision Bass</option>
+                    <option value="">Offset</option>
+                    <option value="">SR</option>
+                    <option value="">Others (Basses)</option>
+                </select>
+    
+                Price Range <div class="price_range_div">
+                    <input type="number" class="min_price range_price"> ← → <input type="number" class="max_price range_price">
+                </div>
+                
+            </div>
+
+            <div class="mym_form_2">
+                Color <input type="color">
+            
+                Number of Strings <select name="" id="">
+                    <option value="">4</option>
+                    <option value="">5</option>
+                    <option value="">6</option>
+                </select>
+    
+                Material <select name="" id="">
+                    <option value="">Maple</option>
+                    <option value="">Mahogany</option>
+                    <option value="">Cedar</option>
+                    <option value="">Pine</option>
+                </select>
+
+                <input type="submit" class="submit_button">
+            </div>
+        </form>
+    </section>
+
+    <section class="section__join_newsletter section__padding"> <!--Newsletter form-->
+        <h2 class="form_title">Join our Newsletter</h2>
+        
+        <form action="" class="section__join_newsletter_form">
+            Name <input type="text">
+            Email <input type="email">
+            Phone <input type="number">
+            <input type="submit" class="submit_button">
+        </form>
+    </section>
+
+    <footer> <!--Last two sections / Footer area-->
         <section class="footer_section_1">
             <p id="footer_section_1_text_left">
                 About Us <br>

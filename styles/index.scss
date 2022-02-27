@@ -42,7 +42,7 @@ body{
     @include keepInCenter();
 
     &_logos_group{
-        width: 1240px;
+        /*width: 1240px;*/
     }
 }
 
@@ -53,7 +53,6 @@ h2{
 p{
     font-family: 'Baloo Tammudu 2', cursive;
 }
-
 
 .section__padding {
     padding: 50px;
@@ -72,44 +71,75 @@ p{
         position: relative;
         display: flex;
         flex-direction: row;
+
+        .product{
+            margin: 0 15px;
+        }
         
         &_text{
             position: absolute;
-            width: 55%;
+            /*width: 55%;*/
             bottom: 10px;
             text-align: center;
-            left: 18px;
             text-decoration: none;
             color: $yellowCol;
         }
 
         .product_price{
 
-            &_1{
+            @mixin productPricesYeah {
                 font-size: 32px;
                 width: 140px;
                 font-weight: lighter;
             }
 
+            &_1{
+                @include productPricesYeah();
+            }
+
             &_2{
-                font-size: 32px;
-                width: 140px;
-                font-weight: lighter;
+                @include productPricesYeah();
+            }
+
+            &_3{
+                @include productPricesYeah();
+            }
+
+            &_4{
+                @include productPricesYeah();
+            }
+
+            &_5{
+                @include productPricesYeah();
             }
         }
 
         .product_name{
 
-            &_1{
+            @mixin productNamesYeah {
                 line-height: 20px;
                 width: 140px;
                 font-size: 12px;
             }
 
+            &_1{
+                @include productNamesYeah();
+            }
+
             &_2{
-                line-height: 20px;
-                width: 140px;
-                font-size: 12px;
+                @include productNamesYeah();
+            }
+
+            &_3{
+                @include productNamesYeah();
+            }
+
+            &_4{
+                @include productNamesYeah();
+            }
+
+            &_5{
+                @include productNamesYeah();
             }
         }
     }
@@ -127,6 +157,58 @@ p{
     flex-wrap: wrap;
     justify-content: center;
     padding: 20px 100px;
+}
+
+.section__meet_your_match{
+    @include keepInCenter();
+    background-color: $whiteCol;
+
+    .form_title{
+        margin-bottom: 10px;
+    }
+
+    &_form{
+        display: flex;
+        flex-direction: row;    
+
+        .mym_form_1{
+            display: flex;
+            flex-direction: column;
+            margin: 0 20px;
+
+            .price_range_div{
+                margin-top: 2px;
+
+                .range_price{
+                    width: 50px;
+                }
+            }
+        }
+
+        .mym_form_2{
+            display: flex;
+            flex-direction: column;
+            margin: 0 20px;
+        }
+    }
+}
+
+.section__join_newsletter{
+    @include keepInCenter();
+    background-color: $yellowCol; 
+
+    .form_title{
+        margin-bottom: 10px;
+    }
+
+    &_form{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.submit_button{
+    margin: 20px;
 }
 
 .manufacturer_hyperlink{
@@ -226,6 +308,7 @@ nav{
     font-family: 'Baloo Tammudu 2', cursive;
     justify-content: space-between;
     display: flex;
+    align-items: center;
 
     .navbar__catDeals{
         display: flex;
