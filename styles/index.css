@@ -456,8 +456,12 @@ nav .navbar__catDeals__categories {
 }
 
 nav .navbar__cat__label {
-  font-size: 1.5em;
+  font-size: 1em;
   margin: 0 50px;
+}
+
+nav .navbar__cat__label:hover {
+  cursor: pointer;
 }
 
 nav .navbar__cat__label:hover > .navbar__catDeals__categories {
@@ -476,8 +480,12 @@ nav .navbar__catDeals__newDeals {
 }
 
 nav .navbar__deals__label {
-  font-size: 1.5em;
+  font-size: 1em;
   margin: 0 50px;
+}
+
+nav .navbar__deals__label:hover {
+  cursor: pointer;
 }
 
 nav .navbar__deals__label:hover > .navbar__catDeals__newDeals {

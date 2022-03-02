@@ -345,10 +345,12 @@ nav{
 
     .navbar__cat__label{
 
-        font-size: 1.5em;
+        font-size: 1em;
         margin: 0 50px;
 
         &:hover{
+
+            cursor: pointer;
 
             > .navbar__catDeals__categories{
                 display: block;
@@ -364,9 +366,11 @@ nav{
     }
 
     .navbar__deals__label{
-        font-size: 1.5em;
+        font-size: 1em;
         margin: 0 50px;
         &:hover{
+
+            cursor: pointer;
 
             > .navbar__catDeals__newDeals{
                 display: block;
