@@ -166,7 +166,7 @@ p {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 20px 100px;
+  padding: 20px 320px;
 }
 
 .section__meet_your_match {
@@ -185,10 +185,11 @@ p {
       -ms-flex-align: center;
           align-items: center;
   background-color: #FFFFFF;
+  font-family: 'Baloo Tammudu 2', cursive;
 }
 
 .section__meet_your_match .form_title {
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 .section__meet_your_match_form {
@@ -210,13 +211,12 @@ p {
       -ms-flex-direction: column;
           flex-direction: column;
   margin: 0 20px;
+  -webkit-box-align: left;
+      -ms-flex-align: left;
+          align-items: left;
 }
 
-.section__meet_your_match_form .mym_form_1 .price_range_div {
-  margin-top: 2px;
-}
-
-.section__meet_your_match_form .mym_form_1 .price_range_div .range_price {
+.section__meet_your_match_form .mym_form_1 .range_price {
   width: 50px;
 }
 
@@ -229,6 +229,9 @@ p {
       -ms-flex-direction: column;
           flex-direction: column;
   margin: 0 20px;
+  -webkit-box-align: left;
+      -ms-flex-align: left;
+          align-items: left;
 }
 
 .section__join_newsletter {
@@ -247,6 +250,7 @@ p {
       -ms-flex-align: center;
           align-items: center;
   background-color: #FFE70C;
+  font-family: 'Baloo Tammudu 2', cursive;
 }
 
 .section__join_newsletter .form_title {
@@ -261,10 +265,14 @@ p {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .submit_button {
   margin: 20px;
+  width: 100px;
 }
 
 .manufacturer_hyperlink {
@@ -277,6 +285,8 @@ p {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  height: 142px;
+  width: 142px;
   margin: 20px 30px;
   padding: 20px;
   border-radius: 100%;
@@ -445,6 +455,11 @@ nav .navbar__catDeals__categories {
   list-style: none;
 }
 
+nav .navbar__cat__label {
+  font-size: 1.5em;
+  margin: 0 50px;
+}
+
 nav .navbar__cat__label:hover > .navbar__catDeals__categories {
   display: block;
   background-color: #FFE70C;
@@ -458,6 +473,11 @@ nav .navbar__catDeals__newDeals {
   position: absolute;
   z-index: 2;
   list-style: none;
+}
+
+nav .navbar__deals__label {
+  font-size: 1.5em;
+  margin: 0 50px;
 }
 
 nav .navbar__deals__label:hover > .navbar__catDeals__newDeals {
