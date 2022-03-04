@@ -5,6 +5,10 @@
           box-sizing: border-box;
 }
 
+body {
+  font-size: 16px;
+}
+
 .section__search_by_category {
   background-color: #FFE70C;
   color: #000000;
@@ -71,17 +75,33 @@ p {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  margin-top: 30px;
 }
 
 .section__new_deals_div_product_showcase .product {
   margin: 0 15px;
+  -webkit-transition: -webkit-transform .2s;
+  transition: -webkit-transform .2s;
+  transition: transform .2s;
+  transition: transform .2s, -webkit-transform .2s;
+}
+
+.section__new_deals_div_product_showcase .product:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+.section__new_deals_div_product_showcase .product:hover > .section__new_deals_div_product_showcase_text {
+  display: block;
 }
 
 .section__new_deals_div_product_showcase_text {
+  display: none;
+  margin-left: 10px;
   position: absolute;
   /*width: 55%;*/
   bottom: 10px;
-  text-align: center;
+  text-align: left;
   text-decoration: none;
   color: #FFE70C;
 }
@@ -234,6 +254,29 @@ p {
           align-items: left;
 }
 
+.section__meet_your_match_form .mym_form_2 .submit_button {
+  background-color: #FFE70C;
+  border: none;
+}
+
+.section__meet_your_match select {
+  border-width: 1px;
+  border-color: #000000;
+  border-radius: 10px;
+  height: 25px;
+  margin-left: 15px;
+  font-family: 'Baloo Tammudu 2', cursive;
+}
+
+.section__meet_your_match input {
+  border-width: 1px;
+  border-color: #000000;
+  border-radius: 10px;
+  height: 25px;
+  margin: 15px;
+  font-family: 'Baloo Tammudu 2', cursive;
+}
+
 .section__join_newsletter {
   margin: auto;
   -webkit-box-pack: center;
@@ -270,9 +313,25 @@ p {
           align-items: center;
 }
 
-.submit_button {
+.section__join_newsletter_form input {
+  border-width: 1px;
+  border-color: #000000;
+  border-radius: 10px;
+  height: 25px;
+  margin: 15px;
+  font-family: 'Baloo Tammudu 2', cursive;
+}
+
+.section__join_newsletter_form .submit_button {
   margin: 20px;
   width: 100px;
+  background-color: #000000;
+  color: #FFE70C;
+  border: none;
+  border-radius: 10px;
+  height: 25px;
+  margin: 15px;
+  font-family: 'Baloo Tammudu 2', cursive;
 }
 
 .manufacturer_hyperlink {
@@ -293,6 +352,15 @@ p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-transition: -webkit-transform .2s;
+  transition: -webkit-transform .2s;
+  transition: transform .2s;
+  transition: transform .2s, -webkit-transform .2s;
+}
+
+.manufacturer_hyperlink:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
 }
 
 .bombhead__logo {
@@ -345,6 +413,10 @@ header {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+header .navbar_logo_div:hover {
+  cursor: pointer;
 }
 
 footer .footer_section_1 {
@@ -438,8 +510,9 @@ nav .navbar__catDeals {
 }
 
 nav .navbar_search {
-  width: 380px;
-  height: 20px;
+  width: 580px;
+  height: 25px;
+  border: none;
 }
 
 nav .catDeals_item {

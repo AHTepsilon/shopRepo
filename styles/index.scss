@@ -33,7 +33,7 @@ $darkGrayCol: #6C6C6C;
 }
 
 body{
-
+    font-size: 16px;
 }
 
 .section__search_by_category{
@@ -71,16 +71,28 @@ p{
         position: relative;
         display: flex;
         flex-direction: row;
+        margin-top: 30px;
 
         .product{
             margin: 0 15px;
+            transition: transform .2s;
+
+            &:hover{
+                transform: scale(1.2);
+
+                >.section__new_deals_div_product_showcase_text{
+                    display: block;
+                }
+            }
         }
         
         &_text{
+            display: none;
+            margin-left: 10px;
             position: absolute;
             /*width: 55%;*/
             bottom: 10px;
-            text-align: center;
+            text-align: left;
             text-decoration: none;
             color: $yellowCol;
         }
@@ -188,7 +200,30 @@ p{
             flex-direction: column;
             margin: 0 20px;
             align-items: left;
+            
+            .submit_button{
+                background-color: $yellowCol;
+                border: none;
+            }
         }
+    }
+
+    select{
+        border-width: 1px;
+        border-color: #000000;
+        border-radius: 10px;
+        height: 25px;
+        margin-left: 15px;
+        font-family: 'Baloo Tammudu 2', cursive;
+    }
+
+    input{
+        border-width: 1px;
+        border-color: #000000;
+        border-radius: 10px;
+        height: 25px;
+        margin: 15px;
+        font-family: 'Baloo Tammudu 2', cursive;
     }
 }
 
@@ -205,12 +240,29 @@ p{
         display: flex;
         flex-direction: column;
         align-items: center;
-    }
-}
 
-.submit_button{
-    margin: 20px;
-    width: 100px;
+        input{
+            border-width: 1px;
+            border-color: #000000;
+            border-radius: 10px;
+            height: 25px;
+            margin: 15px;
+            font-family: 'Baloo Tammudu 2', cursive;
+        }
+
+        
+        .submit_button{
+            margin: 20px;
+            width: 100px;
+            background-color: $blackCol;
+            color: $yellowCol;
+            border: none;
+            border-radius: 10px;
+            height: 25px;
+            margin: 15px;
+            font-family: 'Baloo Tammudu 2', cursive;
+        }
+    }
 }
 
 .manufacturer_hyperlink{
@@ -224,6 +276,11 @@ p{
     padding: 20px;
     border-radius: 100%;
     display: flex;
+    transition: transform .2s;
+
+    &:hover{
+        transform: scale(1.2);
+    }
 }
 
 .bombhead__logo{
@@ -272,6 +329,12 @@ header{
     height: 100px;
     align-items: center;
     justify-content: center;
+
+    .navbar_logo_div{
+        &:hover{
+            cursor: pointer;
+        }
+    }
 }
 
 footer{
@@ -322,8 +385,9 @@ nav{
     }
 
     .navbar_search{
-        width: 380px;
-        height: 20px;
+        width: 580px;
+        height: 25px;
+        border: none;
     }
 
     .catDeals_item{
