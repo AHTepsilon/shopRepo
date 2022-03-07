@@ -247,6 +247,8 @@ p{
 
                 &:hover{
                     cursor: pointer;
+                    background-color: $blackCol;
+                    color: $whiteCol;
                 }
             }
         }
@@ -308,6 +310,8 @@ p{
 
             &:hover{
                 cursor: pointer;
+                background-color: $whiteCol;
+                color: $blackCol;
             }
         }
     }
@@ -344,9 +348,13 @@ p{
 .slider{
     position: relative;
     width: 100%;
-    height: 549px;
+    height: 17em;
     overflow: hidden;
     transition: transform .2s;
+
+    .hide{
+        display: none;
+    }
 
     &:hover{
 
@@ -354,8 +362,13 @@ p{
             transform: translateY(-52%);
         }
 
-        > .slider__text__paragraph{
+        > .slider__text{
+            transform: translateY(-52%);
             color: $blackCol;
+        }
+
+        > .hide{
+            display: block;
         }
 
     }
@@ -365,13 +378,14 @@ p{
         width: 55%;
         bottom: 30px;
         left: 150px;
+        transition: transform 2s;
 
         &__title{
             font-family: 'Bakbak One', cursive;
             color: $yellowCol;
             font-weight: lighter;
             margin-bottom: 12px;
-            font-size: 72px;
+            font-size: 50px;
         }
 
         &__paragraph{
@@ -388,13 +402,13 @@ p{
     &__img_1 {
         width: 100%;
         height: 100%;
-        background: linear-gradient(0deg, #000000 0%, rgba(0, 0, 0, 0) 67.98%),
+        background: linear-gradient(0deg, #000000 0%, rgba(0, 0, 0, 0) 67.98%);
     }
 
     &__img_2{
         width: 100%;
         height: 100%;
-        background: linear-gradient(0deg, #000000 0%, rgba(0, 0, 0, 0) 67.98%),
+        background: linear-gradient(0deg, #000000 0%, rgba(0, 0, 0, 0) 67.98%);
     }
 }
 
@@ -419,6 +433,11 @@ footer{
         background-color: $lightGrayCol;
         @include keepInCenter();
         flex-direction: row;
+    }
+
+    .footerHL{
+        color: $blackCol;
+        text-decoration: none;
     }
     
     #footer_section_1_text_left{
@@ -471,7 +490,7 @@ nav{
     }
 
     .navbar_search{
-        width: 580px;
+        width: 25em;
         height: 25px;
         border: none;
     }
