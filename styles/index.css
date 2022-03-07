@@ -420,12 +420,35 @@ p {
 .bombhead__logo {
   position: static;
   margin-right: 20px;
+  -webkit-transition: -webkit-transform .2s;
+  transition: -webkit-transform .2s;
+  transition: transform .2s;
+  transition: transform .2s, -webkit-transform .2s;
+}
+
+.bombhead__logo:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
 }
 
 .slider {
   position: relative;
   width: 100%;
-  height: 429px;
+  height: 549px;
+  overflow: hidden;
+  -webkit-transition: -webkit-transform .2s;
+  transition: -webkit-transform .2s;
+  transition: transform .2s;
+  transition: transform .2s, -webkit-transform .2s;
+}
+
+.slider:hover > .image_container {
+  -webkit-transform: translateY(-52%);
+          transform: translateY(-52%);
+}
+
+.slider:hover > .slider__text__paragraph {
+  color: #000000;
 }
 
 .slider__text {
@@ -449,7 +472,21 @@ p {
   line-height: 24px;
 }
 
+.slider .image_container {
+  -webkit-transition: -webkit-transform 2s;
+  transition: -webkit-transform 2s;
+  transition: transform 2s;
+  transition: transform 2s, -webkit-transform 2s;
+}
+
 .slider__img_1 {
+  width: 100%;
+  height: 100%;
+  background: -webkit-gradient(linear, left bottom, left top, from(#000000), color-stop(67.98%, rgba(0, 0, 0, 0)));
+  background: linear-gradient(0deg, #000000 0%, rgba(0, 0, 0, 0) 67.98%);
+}
+
+.slider__img_2 {
   width: 100%;
   height: 100%;
   background: -webkit-gradient(linear, left bottom, left top, from(#000000), color-stop(67.98%, rgba(0, 0, 0, 0)));
@@ -600,6 +637,7 @@ nav .navbar__cat__label {
 
 nav .navbar__cat__label:hover {
   cursor: pointer;
+  text-decoration: underline;
 }
 
 nav .navbar__cat__label:hover > .navbar__catDeals__categories {
@@ -624,6 +662,7 @@ nav .navbar__deals__label {
 
 nav .navbar__deals__label:hover {
   cursor: pointer;
+  text-decoration: underline;
 }
 
 nav .navbar__deals__label:hover > .navbar__catDeals__newDeals {
@@ -641,6 +680,10 @@ nav .navbar_icons_div .navbar__icons {
       -ms-flex-direction: row;
           flex-direction: row;
   list-style: none;
+  -webkit-transition: -webkit-transform .2s;
+  transition: -webkit-transform .2s;
+  transition: transform .2s;
+  transition: transform .2s, -webkit-transform .2s;
 }
 
 nav .navbar_icons_div .navbar__icons_button {
@@ -651,6 +694,8 @@ nav .navbar_icons_div .navbar__icons_button {
 
 nav .navbar_icons_div .navbar__icons_button:hover {
   cursor: pointer;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
 }
 
 nav .navbar_icons_div .navbar__icons #shopping_cart_button {

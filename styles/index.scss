@@ -334,12 +334,31 @@ p{
 .bombhead__logo{
     position: static;
     margin-right: 20px;
+    transition: transform .2s;
+
+    &:hover{
+        transform: scale(1.2);
+    }
 }
 
 .slider{
     position: relative;
     width: 100%;
-    height: 429px;
+    height: 549px;
+    overflow: hidden;
+    transition: transform .2s;
+
+    &:hover{
+
+        > .image_container{
+            transform: translateY(-52%);
+        }
+
+        > .slider__text__paragraph{
+            color: $blackCol;
+        }
+
+    }
 
     &__text {
         position: absolute;
@@ -362,7 +381,17 @@ p{
         }
     }
 
+    .image_container{
+        transition: transform 2s;
+    }
+
     &__img_1 {
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(0deg, #000000 0%, rgba(0, 0, 0, 0) 67.98%),
+    }
+
+    &__img_2{
         width: 100%;
         height: 100%;
         background: linear-gradient(0deg, #000000 0%, rgba(0, 0, 0, 0) 67.98%),
@@ -472,6 +501,7 @@ nav{
         &:hover{
 
             cursor: pointer;
+            text-decoration: underline;
 
             > .navbar__catDeals__categories{
                 display: block;
@@ -492,6 +522,7 @@ nav{
         &:hover{
 
             cursor: pointer;
+            text-decoration: underline;
 
             > .navbar__catDeals__newDeals{
                 display: block;
@@ -505,6 +536,7 @@ nav{
         .navbar__icons{
             @include inlineBlock();
             list-style: none;
+            transition: transform .2s;
 
             &_button{
                 background: none;
@@ -513,6 +545,7 @@ nav{
 
                 &:hover{
                     cursor: pointer;
+                    transform: scale(1.2);
                 }
             }
 
