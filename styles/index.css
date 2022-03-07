@@ -5,10 +5,6 @@
           box-sizing: border-box;
 }
 
-body {
-  font-size: 16px;
-}
-
 .section__search_by_category {
   background-color: #FFE70C;
   color: #000000;
@@ -236,7 +232,7 @@ p {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 20px 320px;
+  padding: 20px 5%;
 }
 
 .section__meet_your_match {
@@ -551,6 +547,8 @@ nav {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 nav .navbar_search_div {

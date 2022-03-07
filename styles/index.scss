@@ -33,7 +33,7 @@ $darkGrayCol: #6C6C6C;
 }
 
 body{
-    font-size: 16px;
+    
 }
 
 .section__search_by_category{
@@ -208,7 +208,7 @@ p{
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    padding: 20px 320px;
+    padding: 20px 5%;
 }
 
 .section__meet_your_match{  
@@ -424,6 +424,7 @@ nav{
     justify-content: space-between;
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
     
 
     .navbar_search_div{
