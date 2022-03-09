@@ -24,6 +24,14 @@
           align-items: center;
 }
 
+.section__search_by_category .first_gradient {
+  width: 100%;
+}
+
+.section__search_by_category .last_gradient {
+  width: 100%;
+}
+
 .section__search_by_category_content {
   display: -webkit-box;
   display: -ms-flexbox;

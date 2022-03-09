@@ -41,6 +41,14 @@ body{
     color:$blackCol;
     @include keepInCenter();
 
+    .first_gradient{
+        width: 100%;
+    }
+
+    .last_gradient{
+        width: 100%;
+    }
+
     &_content{
         display: flex;
         flex-direction: row;
