@@ -378,7 +378,6 @@ p{
         width: 55%;
         bottom: 30px;
         left: 150px;
-        transition: transform 2s;
 
         &__title{
             font-family: 'Bakbak One', cursive;
@@ -386,12 +385,14 @@ p{
             font-weight: lighter;
             margin-bottom: 12px;
             font-size: 50px;
+            transition: transform 2s;
         }
 
         &__paragraph{
             font-family: 'Baloo Tammudu 2', cursive;
             color: $whiteCol;
             line-height: 24px;
+            transition: transform 2s;
         }
     }
 
@@ -466,6 +467,22 @@ footer{
     }
 }
 
+.burger_menu_div{
+
+    display: none;
+    
+    .menu_icon{
+        width: 28px;
+    }
+
+    .navbar__icons_button{
+        background: none;
+        border: none;
+    }
+
+    list-style: none;
+}
+
 nav{
     @include inlineBlock();
     font-family: 'Baloo Tammudu 2', cursive;
@@ -515,7 +532,7 @@ nav{
     .navbar__cat__label{
 
         font-size: 1em;
-        margin: 0 50px;
+        margin: 0 2em;
 
         &:hover{
 
@@ -537,7 +554,7 @@ nav{
 
     .navbar__deals__label{
         font-size: 1em;
-        margin: 0 50px;
+        margin: 0 2em;
         &:hover{
 
             cursor: pointer;

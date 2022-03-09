@@ -470,10 +470,6 @@ p {
   width: 55%;
   bottom: 30px;
   left: 150px;
-  -webkit-transition: -webkit-transform 2s;
-  transition: -webkit-transform 2s;
-  transition: transform 2s;
-  transition: transform 2s, -webkit-transform 2s;
 }
 
 .slider__text__title {
@@ -482,12 +478,20 @@ p {
   font-weight: lighter;
   margin-bottom: 12px;
   font-size: 50px;
+  -webkit-transition: -webkit-transform 2s;
+  transition: -webkit-transform 2s;
+  transition: transform 2s;
+  transition: transform 2s, -webkit-transform 2s;
 }
 
 .slider__text__paragraph {
   font-family: 'Baloo Tammudu 2', cursive;
   color: #FFFFFF;
   line-height: 24px;
+  -webkit-transition: -webkit-transform 2s;
+  transition: -webkit-transform 2s;
+  transition: transform 2s;
+  transition: transform 2s, -webkit-transform 2s;
 }
 
 .slider .image_container {
@@ -591,6 +595,20 @@ footer .footer_section_2 .social_media_hyperlink {
   margin: 6px;
 }
 
+.burger_menu_div {
+  display: none;
+  list-style: none;
+}
+
+.burger_menu_div .menu_icon {
+  width: 28px;
+}
+
+.burger_menu_div .navbar__icons_button {
+  background: none;
+  border: none;
+}
+
 nav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -655,7 +673,7 @@ nav .navbar__catDeals__categories {
 
 nav .navbar__cat__label {
   font-size: 1em;
-  margin: 0 50px;
+  margin: 0 2em;
 }
 
 nav .navbar__cat__label:hover {
@@ -680,7 +698,7 @@ nav .navbar__catDeals__newDeals {
 
 nav .navbar__deals__label {
   font-size: 1em;
-  margin: 0 50px;
+  margin: 0 2em;
 }
 
 nav .navbar__deals__label:hover {
