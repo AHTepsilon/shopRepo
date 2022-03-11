@@ -346,6 +346,13 @@ p{
     }
 }
 
+#NL_name{
+    &:focus{
+        background-color: $blackCol;
+        color: $whiteCol;
+    }
+}
+
 .bombhead__logo{
     position: static;
     margin-right: 20px;

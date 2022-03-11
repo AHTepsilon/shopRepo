@@ -107,6 +107,7 @@ p {
 
 .section__new_deals_content .left_chevron_yellow_img {
   margin-right: 20px;
+  margin-left: 20px;
 }
 
 .section__new_deals_content .left_chevron_yellow_img:hover {
@@ -115,6 +116,7 @@ p {
 
 .section__new_deals_content .right_chevron_yellow_img {
   margin-left: 20px;
+  margin-right: 20px;
 }
 
 .section__new_deals_content .right_chevron_yellow_img:hover {
@@ -428,6 +430,11 @@ p {
 .manufacturer_hyperlink:hover {
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
+}
+
+#NL_name:focus {
+  background-color: #000000;
+  color: #FFFFFF;
 }
 
 .bombhead__logo {
