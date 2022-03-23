@@ -13,7 +13,8 @@ let products = [
         body: "Stratocaster",
         price: 30000,
         color: "Red",
-        stock: true
+        stock: true,
+        image: "../product/AX120"
     },
 
     {
@@ -70,38 +71,22 @@ products.forEach((product)=>{
         console.log(product);
     } 
 
+    //const {instrument, manufacturer, body, price, color, stock}
+
     let productdiv = document.createElement("div");
 
-    let productBrand = document.createElement("h1");
-    productBrand.innerHTML = product.manufacturer;
+    const stockLabel = product.stock ? "ON STOCK" : "NOT ON STOCK";
 
-    let productInstrument = document.createElement("h3");
-    productInstrument.innerHTML = product.instrument;
+    productdiv.innerHTML = `
 
-    let productBody = document.createElement("h4");
-    productBody.innerHTML = product.body;
+    <h1>${product.manufacturer}</h1>
+    <h3>${product.instrument}</h3>
+    <h4>${product.body}</h4>
+    <p>${product.color}</p>
+    <p>${product.price}</p>
+    <p>${stockLabel}</p>
 
-    let productColor = document.createElement("p");
-    productColor.innerHTML = product.color;
-
-    let productPrice = document.createElement("p");
-    productPrice.innerHTML = product.price;
-
-    let productStock = document.createElement("p");
-
-    if(product.stock){
-        productStock.innerHTML = "ON STOCK";
-    }
-    else{
-        productStock.innerHTML = "NOT ON STOCK";
-    }
-
-    productdiv.appendChild(productBrand);
-    productdiv.appendChild(productInstrument);
-    productdiv.appendChild(productBody);
-    productdiv.appendChild(productColor);
-    productdiv.appendChild(productPrice);
-    productdiv.appendChild(productStock);
+    `
 
     divProducts.appendChild(productdiv);
 });
