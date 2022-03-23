@@ -50,6 +50,15 @@ let products = [
         price: 90000,
         color: "Blue",
         stock: false
+    },
+
+    {
+        instrument: "Bass",
+        manufacturer: "Rickenbacker",
+        body: "S-cut",
+        price: 40000,
+        color: "Purple",
+        stock: true
     }
 ];
 
