@@ -22,7 +22,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding-top: 5em;
+  padding: 10em 0;
 }
 
 .section__search_by_category .first_gradient {
@@ -137,7 +137,7 @@ p {
 }
 
 .section__new_deals_div_product_showcase .product {
-  margin: 0 15px;
+  margin: 0 3em;
   -webkit-transition: -webkit-transform .2s;
   transition: -webkit-transform .2s;
   transition: transform .2s;
@@ -197,31 +197,31 @@ p {
 
 .section__new_deals_div_product_showcase .product_name_1 {
   line-height: 20px;
-  width: 140px;
+  width: 220px;
   font-size: 12px;
 }
 
 .section__new_deals_div_product_showcase .product_name_2 {
   line-height: 20px;
-  width: 140px;
+  width: 220px;
   font-size: 12px;
 }
 
 .section__new_deals_div_product_showcase .product_name_3 {
   line-height: 20px;
-  width: 140px;
+  width: 220px;
   font-size: 12px;
 }
 
 .section__new_deals_div_product_showcase .product_name_4 {
   line-height: 20px;
-  width: 140px;
+  width: 220px;
   font-size: 12px;
 }
 
 .section__new_deals_div_product_showcase .product_name_5 {
   line-height: 20px;
-  width: 140px;
+  width: 220px;
   font-size: 12px;
 }
 
