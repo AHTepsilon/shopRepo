@@ -40,7 +40,7 @@ body{
     background-color: $yellowCol;
     color:$blackCol;
     @include keepInCenter();
-    padding-top: 5em;
+    padding: 10em 0;
 
     .first_gradient{
         width: 100%;
@@ -74,7 +74,8 @@ body{
 }
 
 h2{
-    font-family: 'Bakbak One', cursive;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 2em;
 }
 
 p{
@@ -92,7 +93,7 @@ p{
 
     position: relative;
     width: 100%;
-    height: 429px;
+    height: 600px;
 
     &_content{
         display: flex;  
@@ -125,7 +126,7 @@ p{
         margin-top: 30px;
 
         .product{
-            margin: 0 15px;
+            margin: 0 3em;
             transition: transform .2s;
 
             &:hover{
@@ -146,6 +147,7 @@ p{
             text-align: left;
             text-decoration: none;
             color: $yellowCol;
+            top: 270px;
         }
 
         .product_price{
@@ -181,7 +183,7 @@ p{
 
             @mixin productNamesYeah {
                 line-height: 20px;
-                width: 140px;
+                width: 220px;
                 font-size: 12px;
             }
 
@@ -335,9 +337,8 @@ p{
     justify-content: center;
     height: 142px;
     width: 142px;
-    margin: 20px 30px;
+    margin: 20px 50px;
     padding: 20px;
-    border-radius: 100%;
     display: flex;
     transition: transform .2s;
 
@@ -366,7 +367,7 @@ p{
 .slider{
     position: relative;
     width: 100%;
-    height: 25em;
+    height: 55em;
     overflow: hidden;
     transition: transform .2s;
 
@@ -376,7 +377,7 @@ p{
 
     &:hover{
 
-        > .image_container{
+       /* > .image_container{
             transform: translateY(-52%);
         }
 
@@ -387,22 +388,23 @@ p{
 
         > .hide{
             display: block;
-        }
+        }*/
 
     }
 
     &__text {
         position: absolute;
         width: 55%;
-        bottom: 30px;
+        bottom: 300px;
         left: 150px;
 
         &__title{
-            font-family: 'Bakbak One', cursive;
+            font-family: 'Bebas Neue', cursive;
             color: $yellowCol;
             font-weight: lighter;
             margin-bottom: 12px;
-            font-size: 50px;
+            width: 550px;
+            font-size: 96px;
             transition: transform 2s;
         }
 
@@ -433,7 +435,7 @@ p{
 
 
 header{
-    background-color: $yellowCol;
+    background-color: $blackCol;
     width: 100%;
     padding: 20px;
     height: 100px;
@@ -549,6 +551,7 @@ nav{
 
     .navbar__cat__label{
 
+        color: $yellowCol;
         font-size: 1em;
         margin: 0 2em;
 
@@ -573,6 +576,7 @@ nav{
     .navbar__deals__label{
         font-size: 1em;
         margin: 0 2em;
+        color: $yellowCol;
         &:hover{
 
             cursor: pointer;
