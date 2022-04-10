@@ -1,3 +1,12 @@
+
+let shoppingCartBtn = document.getElementById("navbar__icons_button");
+
+shoppingCartBtn.addEventListener("click",(ev) =>{
+
+    window.open(shoppingCart.html);
+
+});
+
 let user = {
     name: "John",
     email: "johntodd@gmail.com",
