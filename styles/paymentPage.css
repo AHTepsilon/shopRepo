@@ -190,6 +190,10 @@ nav .navbar_icons_div .navbar__icons #shopping_cart_button {
   margin-right: 18px;
 }
 
+input {
+  height: 20px;
+}
+
 .bombhead__logo {
   position: static;
   margin-right: 20px;
@@ -225,5 +229,98 @@ nav .navbar_icons_div .navbar__icons #shopping_cart_button {
 
 .list_element:hover {
   background-color: #d8c300;
+}
+
+section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+section .billing_info_div {
+  margin: 100px 120px;
+}
+
+section .billing_info_div_form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 30px;
+  font-family: 'Baloo Tammudu 2', cursive;
+}
+
+section .billing_info_div_form_input {
+  margin-left: 40px;
+  width: 300px;
+  font-family: 'Baloo Tammudu 2', cursive;
+}
+
+section .payment_info_div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 100px 120px;
+  width: 100%;
+}
+
+section .payment_info_div_credit_card {
+  background-color: #FFFFFF;
+  padding: 40px;
+  border-radius: 20px;
+}
+
+section .payment_info_div_credit_card_form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-family: 'Baloo Tammudu 2', cursive;
+  margin-left: 40px;
+}
+
+section .payment_info_div_credit_card_form .credit_checkb {
+  margin-bottom: 20px;
+  top: 20px;
+  position: static;
+  width: 20px;
+}
+
+section .payment_info_div_credit_card_form .credit_item {
+  width: 200px;
+  margin: 10px;
+}
+
+section .payment_info_div_credit_card_form .credit_item_lower {
+  width: 100px;
+  height: 20px;
+  margin: 10px;
+  font-family: 'Baloo Tammudu 2', cursive;
+}
+
+section .payment_info_div_credit_card_form_lower_part {
+  margin: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  font-family: 'Baloo Tammudu 2', cursive;
 }
 /*# sourceMappingURL=paymentPage.css.map */

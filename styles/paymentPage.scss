@@ -178,6 +178,10 @@ nav{
     }
 }
 
+input{
+    height:20px;
+}
+
 .bombhead__logo{
     position: static;
     margin-right: 20px;
@@ -211,4 +215,88 @@ nav{
         &:hover{
         background-color: darken($color: $yellowCol, $amount: 10)
     }
+}
+
+section{
+
+    display: flex;
+    flex-direction: row;
+    
+    .billing_info_div{
+
+        margin: 100px 120px;
+
+        &_form{
+            
+            display: flex;
+            flex-direction: column;
+            margin-top: 30px;
+            font-family: 'Baloo Tammudu 2', cursive;
+
+            &_input{
+                margin-left: 40px;
+                width: 300px;
+                font-family: 'Baloo Tammudu 2', cursive;
+            }
+        }
+
+    }
+
+    .payment_info_div{
+
+        display: flex;
+        flex-direction: column;
+
+        margin: 100px 120px;
+        width: 100%;
+
+        &_credit_card{
+
+            background-color: $whiteCol;
+            padding: 40px;
+            border-radius: 20px;
+
+            &_form{
+
+                display: flex;
+                flex-direction: column;
+                font-family: 'Baloo Tammudu 2', cursive;
+
+                margin-left: 40px;
+
+                .credit_checkb{
+
+                    margin-bottom: 20px;
+                    top: 20px;
+                    position: static;
+                    width: 20px;
+
+                }
+
+                .credit_item{
+                    width: 200px;
+                    margin: 10px;
+
+                    &_lower{
+                        width: 100px;
+                        height: 20px;
+                        margin: 10px;
+                        font-family: 'Baloo Tammudu 2', cursive;
+                    }
+                }
+
+                &_lower_part{
+
+                    margin: 10px;
+                    display: flex;
+                    flex-direction: row;
+                    font-family: 'Baloo Tammudu 2', cursive;
+                }
+
+            }
+
+        }
+
+    }
+
 }
