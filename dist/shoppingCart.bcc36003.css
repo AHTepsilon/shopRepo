@@ -1,0 +1,270 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #ffe70c;
+}
+
+body .spTitle {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 50px auto auto;
+  display: flex;
+}
+
+h2 {
+  font-family: Bebas Neue, cursive;
+  font-size: 2em;
+}
+
+p {
+  font-family: "Baloo Tammudu 2", cursive;
+}
+
+header {
+  width: 100%;
+  height: 100px;
+  background-color: #000;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+header .navbar_logo_div:hover {
+  cursor: pointer;
+}
+
+nav {
+  flex-flow: wrap;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Baloo Tammudu 2", cursive;
+  display: flex;
+}
+
+nav .navbar_search_div {
+  background-color: #fff;
+  padding: 5px;
+  font-family: "Baloo Tammudu 2", cursive;
+  display: flex;
+}
+
+nav .navbar__catDeals {
+  flex-direction: row;
+  align-items: center;
+  list-style: none;
+  display: flex;
+}
+
+nav .navbar_search {
+  width: 25em;
+  height: 25px;
+  border: none;
+}
+
+nav .catDeals_item {
+  margin: 0 40px;
+}
+
+nav .navbar__catDeals__categories {
+  z-index: 2;
+  padding: 10px 20px;
+  list-style: none;
+  display: none;
+  position: absolute;
+}
+
+nav .navbar__cat__label {
+  color: #ffe70c;
+  margin: 0 2em;
+  font-size: 1em;
+}
+
+nav .navbar__cat__label:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+nav .navbar__cat__label:hover > .navbar__catDeals__categories {
+  background-color: #ffe70c;
+  border-radius: 10px;
+  display: block;
+}
+
+nav .navbar__catDeals__newDeals {
+  z-index: 2;
+  padding: 10px 20px;
+  list-style: none;
+  display: none;
+  position: absolute;
+}
+
+nav .navbar__deals__label {
+  color: #ffe70c;
+  margin: 0 2em;
+  font-size: 1em;
+}
+
+nav .navbar__deals__label:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+nav .navbar__deals__label:hover > .navbar__catDeals__newDeals {
+  background-color: #ffe70c;
+  border-radius: 10px;
+  display: block;
+}
+
+nav .navbar_icons_div .navbar__icons {
+  flex-direction: row;
+  list-style: none;
+  transition: transform .2s, -webkit-transform .2s;
+  display: flex;
+}
+
+nav .navbar_icons_div .navbar__icons_button {
+  background: none;
+  border: none;
+  margin: 0 10px;
+}
+
+nav .navbar_icons_div .navbar__icons_button:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+}
+
+nav .navbar_icons_div .navbar__icons #shopping_cart_button {
+  margin-top: 1px;
+  margin-right: 18px;
+}
+
+.bombhead__logo {
+  margin-right: 20px;
+  transition: transform .2s, -webkit-transform .2s;
+  position: static;
+}
+
+.bombhead__logo:hover {
+  transform: scale(1.2);
+}
+
+.burger_menu_div {
+  list-style: none;
+  display: none;
+}
+
+.burger_menu_div .menu_icon {
+  width: 28px;
+}
+
+.burger_menu_div .navbar__icons_button {
+  background: none;
+  border: none;
+}
+
+.list_element {
+  color: #000;
+  text-decoration: none;
+}
+
+.list_element:hover {
+  background-color: #d8c300;
+}
+
+section {
+  flex-direction: column;
+  display: flex;
+}
+
+section .navi_section {
+  flex-direction: row;
+  margin-left: 10em;
+  display: flex;
+}
+
+section .navi_section_item {
+  margin: 20px;
+}
+
+section .navi_section_item a {
+  color: #000;
+  text-decoration: none;
+}
+
+section .navi_section_item a:hover {
+  color: #fff;
+}
+
+section .item_list {
+  margin: 10em;
+}
+
+section .total_price_div {
+  flex-direction: row;
+  margin-left: 10em;
+  display: flex;
+}
+
+section .total_price_div h2 {
+  margin: 15px;
+}
+
+section .checkout_button {
+  margin-top: 2em;
+  margin-bottom: 5em;
+  margin-left: 11em;
+}
+
+section .checkout_button .checkout_button_a {
+  color: #ffe70c;
+  background-color: #000;
+  border-radius: 10px;
+  padding-top: 8px;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-family: "Baloo Tammudu 2", cursive;
+  text-decoration: none;
+}
+
+footer .footer_section_1 {
+  background-color: #f1f1f1;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  display: flex;
+}
+
+footer .footerHL {
+  color: #000;
+  text-decoration: none;
+}
+
+footer #footer_section_1_text_left, footer #footer_section_1_text_right {
+  text-align: center;
+  color: #000;
+  margin: 50px;
+  line-height: 30px;
+}
+
+footer .footer_section_2 {
+  color: #fff;
+  background-color: #6c6c6c;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  padding-top: 20px;
+  display: flex;
+}
+
+footer .footer_section_2 .social_media_hyperlink {
+  margin: 6px;
+}
+
+/*# sourceMappingURL=shoppingCart.bcc36003.css.map */

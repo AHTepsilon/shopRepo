@@ -1,0 +1,26 @@
+{
+  "name": "bombhead",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "parcel ./index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AHTepsilon/shopRepo.git"
+  },
+  "author": "Alejandro Hernandez Toro",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AHTepsilon/shopRepo/issues"
+  },
+  "homepage": "https://github.com/AHTepsilon/shopRepo#readme",
+  "dependencies": {
+    "firebase": "^9.6.11"
+  },
+  "devDependencies": {
+    "parcel": "^2.4.1"
+  }
+}
