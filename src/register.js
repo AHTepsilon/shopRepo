@@ -1,8 +1,13 @@
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 import {firebaseConfig, firebase} from "./firebase_app";
 import {app} from "./firebase_app";
+import { initializeApp } from "firebase/app";
+import { getFirestore } from "firebase/firestore";
+import { doc, setDoc } from "firebase/firestore";
 
 const auth = getAuth();
+
+const db = getFirestore(app);
 
 const registerForm = document.getElementById("form_register");
 
@@ -14,7 +19,7 @@ let phoneNumber;
 let password;
 
 
-registerForm.addEventListener("submit", (ev) => {
+registerForm.addEventListener("submit", async (ev) => {
 
     ev.preventDefault();
 
@@ -27,7 +32,20 @@ registerForm.addEventListener("submit", (ev) => {
 
     console.log(username + ", " + nameValue + ", " + lastName + ", " + email + ", " + phoneNumber + ", " + password);
 
-    createUser(email, password);
+    const newUser = {
+
+        username,
+        nameValue,
+        lastName,
+        email, 
+        phoneNumber,
+        password
+
+    }
+
+    const userCreated = await createUser(newUser.email, newUser.password);
+
+    await addUserToDatabase(db, userCreated.uid, newUser);
 
 });
 
@@ -35,6 +53,9 @@ async function createUser(email, password){
 
     try{
         const newUser = await createUserWithEmailAndPassword(auth, email, password);
+
+        return newUser;
+
         console.log(newUser);
     }
     
@@ -55,4 +76,19 @@ async function createUser(email, password){
         }
 
     }
+}
+
+async function addUserToDatabase(db, userId, userInfo){
+      
+      try{
+
+        await setDoc(doc(db, "users", userId), userInfo);
+
+      }
+
+      catch(error){
+
+        console.log(error);
+
+      }
 }

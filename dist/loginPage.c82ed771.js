@@ -528,7 +528,7 @@ loginForm.addEventListener("submit", (ev)=>{
 });
 async function login(email1, password1) {
     try {
-        await _auth.signInWithEmailAndPassword(auth, email1, password1);
+        const { user  } = await _auth.signInWithEmailAndPassword(auth, email1, password1);
         alert("Login successful");
     } catch (error) {
         console.log(error);

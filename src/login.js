@@ -24,7 +24,7 @@ async function login(email, password){
 
     try{
 
-        await signInWithEmailAndPassword(auth, email, password);
+        const { user } = await signInWithEmailAndPassword(auth, email, password);
 
         alert("Login successful");
 
