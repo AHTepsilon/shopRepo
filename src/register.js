@@ -43,9 +43,9 @@ registerForm.addEventListener("submit", async (ev) => {
 
     }
 
-    const userCreated = await createUser(newUser.email, newUser.password);
+    const { user } = await createUser(newUser.email, newUser.password);
 
-    await addUserToDatabase(db, userCreated.uid, newUser);
+    await addUserToDatabase(db, user.uid, newUser);
 
 });
 

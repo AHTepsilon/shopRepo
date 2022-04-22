@@ -544,8 +544,8 @@ registerForm.addEventListener("submit", async (ev)=>{
         phoneNumber,
         password
     };
-    const userCreated = await createUser(newUser.email, newUser.password);
-    await addUserToDatabase(db, userCreated.uid, newUser);
+    const { user  } = await createUser(newUser.email, newUser.password);
+    await addUserToDatabase(db, user.uid, newUser);
 });
 async function createUser(email1, password1) {
     try {
