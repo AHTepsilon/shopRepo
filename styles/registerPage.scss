@@ -222,10 +222,9 @@ input{
 }
 
 section{
-    @include keepInCenter();
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: left;
     text-align: center;
     margin-top: 10%;
     

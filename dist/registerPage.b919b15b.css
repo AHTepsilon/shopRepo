@@ -181,11 +181,10 @@ input {
 }
 
 section {
+  align-items: left;
   text-align: center;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin: 10% auto auto;
+  margin-top: 10%;
   display: flex;
 }
 

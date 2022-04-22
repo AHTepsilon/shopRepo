@@ -46,6 +46,11 @@ nav {
   display: flex;
 }
 
+nav a {
+  color: #ffe70c;
+  text-decoration: none !important;
+}
+
 nav .navbar_search_div {
   background-color: #fff;
   padding: 5px;
@@ -101,6 +106,10 @@ nav .navbar__catDeals__newDeals {
   list-style: none;
   display: none;
   position: absolute;
+}
+
+nav .navbar__addItems__label:hover {
+  text-decoration: underline;
 }
 
 nav .navbar__deals__label {

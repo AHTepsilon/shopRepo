@@ -510,6 +510,11 @@ nav{
     display: flex;
     align-items: center;
     flex-wrap: wrap;
+
+    a{
+        text-decoration: none !important;
+        color: $yellowCol;
+    }
     
 
     .navbar_search_div{
@@ -571,6 +576,16 @@ nav{
 
     .navbar__catDeals__newDeals{
         @include dropdownList();
+    }
+
+    .navbar__addItems__label{
+
+        &:hover{
+
+            text-decoration: underline;
+
+        }
+
     }
 
     .navbar__deals__label{
