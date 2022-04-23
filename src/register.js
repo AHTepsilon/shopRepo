@@ -17,6 +17,7 @@ let lastName;
 let email;
 let phoneNumber;
 let password;
+let admin;
 
 
 registerForm.addEventListener("submit", async (ev) => {
@@ -29,6 +30,7 @@ registerForm.addEventListener("submit", async (ev) => {
     email = document.getElementById("form_register_email").value;
     phoneNumber = document.getElementById("form_register_phoneNumber").value;
     password = document.getElementById("form_register_password").value;
+    admin = false;
 
     console.log(username + ", " + nameValue + ", " + lastName + ", " + email + ", " + phoneNumber + ", " + password);
 
@@ -39,7 +41,8 @@ registerForm.addEventListener("submit", async (ev) => {
         lastName,
         email, 
         phoneNumber,
-        password
+        password,
+        admin
 
     }
 
@@ -91,4 +94,10 @@ async function addUserToDatabase(db, userId, userInfo){
         console.log(error);
 
       }
+}
+
+async function goToLanding(){
+
+    window.location.href = "./index.html"
+
 }
