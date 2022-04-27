@@ -15,6 +15,8 @@ async function fetchItems(db){
         const collectionRef = collection(db, "items");
         const { docs } = await getDocs(collectionRef);
         const firebaseProducts = docs.map((doc) =>{
+
+            console.log(doc);
     
             return{
     

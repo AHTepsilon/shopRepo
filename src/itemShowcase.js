@@ -17,6 +17,7 @@ const itemsArea = document.getElementById("section__new_deals_div_product_showca
 async function getItems(){
 
     const firebaseProducts = await fetchItems(db);
+    itemsArea.innerHTML = "";
     console.log(firebaseProducts);
 
     firebaseProducts.forEach(product =>{
@@ -31,6 +32,8 @@ function displayItems(item){
 
     const product = document.createElement("a");
     product.className = "product";
+    
+    product.setAttribute("href", `./product.html?id=${item.id}`);
 
     const placeholder = item.images ? item.images[0] : "https://m.media-amazon.com/images/I/516kTnYWBJL._AC_SX569_.jpg"
 
