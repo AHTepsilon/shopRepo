@@ -128,9 +128,11 @@ p{
         .product{
             margin: 0 3em;
             transition: transform .2s;
+            display: block;
 
             &:hover{
                 transform: scale(1.2);
+                cursor: pointer;
 
                 >.section__new_deals_div_product_showcase_text{
                     display: block;
@@ -210,8 +212,8 @@ p{
     }
 
     .guitarPhoto{
-        width: 100%;
-        height: 100%;
+        width: 140px;
+        height: 400px;
         background: linear-gradient(0deg, #000000 0%, rgba(0, 0, 0, 0) 67.98%),
     }
 }

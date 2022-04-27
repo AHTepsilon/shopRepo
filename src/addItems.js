@@ -48,7 +48,7 @@ async function addItemToDatabase(db, nameValue, manufacturer, body, itemSpecs){
       
       try{
 
-        await setDoc(doc(db, "items", manufacturer, body, nameValue), itemSpecs);
+        await setDoc(doc(db, "items", nameValue), itemSpecs);
 
       }
 
