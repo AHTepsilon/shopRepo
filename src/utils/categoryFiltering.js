@@ -123,6 +123,12 @@ function filterIt(){
 
     });
 
+    filterForm.addEventListener("submit", (ev)=>{
+
+        
+
+    });
+
 }
 
 export{
