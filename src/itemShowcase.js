@@ -9,10 +9,14 @@ import { collection, getDocs } from "firebase/firestore";
 
 import { fetchItems } from "./utils/item";
 
+import { filterIt } from "./utils/categoryFiltering";
+
 
 const db = getFirestore(app);
 
 const itemsArea = document.getElementById("section__new_deals_div_product_showcase");
+
+let productArr = [];
 
 async function getItems(){
 
@@ -25,6 +29,8 @@ async function getItems(){
         displayItems(product);
 
     });
+
+    productArr = firebaseProducts;
 
 }
 
@@ -51,4 +57,14 @@ function displayItems(item){
 
 }
 
+export{
+
+    productArr,
+    displayItems,
+    itemsArea
+        
+}
+
 getItems();
+
+filterIt();
