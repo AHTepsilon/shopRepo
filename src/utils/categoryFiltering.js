@@ -18,9 +18,13 @@ const filterFormManufacturer = document.getElementById("manufacturer-querier");
 const filterFormBody = document.getElementById("body-querier");
 const filterFormColor = document.getElementById("color-querier");
 
+let filterProductsInstMan = [];
+let filterProductsBodCol = [];
+let filterProducts;
+
 function filterIt(){
 
-    filterFormInstrument.addEventListener("change", (ev) =>{
+    /*filterFormInstrument.addEventListener("change", (ev) =>{
 
         console.log(ev);
 
@@ -29,7 +33,7 @@ function filterIt(){
         let categoryToFilter;
         let filteredItems = [];
 
-        if(newChangeInst !== "Any"){
+        if(newChangeInst !== "Any") {
             
             (newChangeInst == "Guitars") ? categoryToFilter = "Guitar" : null;
             (newChangeInst == "Basses") ? categoryToFilter = "Bass" : null;
@@ -41,9 +45,9 @@ function filterIt(){
             console.log(filteredItems);
         }
 
-        else{
+        else {
 
-            filteredItems = productArr;
+            filterProducts = productArr;
 
         }
 
@@ -66,12 +70,12 @@ function filterIt(){
         console.log(newChangeMan);
 
         (newChangeMan !== "Any") ?
-         filteredItems = productArr.filter((item) => item.manufacturer === newChangeMan) :
+        filterProducts = productArr.filter((item) => item.manufacturer === newChangeMan) :
           filteredItems = productArr;
 
         itemsArea.innerHTML = "";
     
-        filteredItems.forEach((item) => {
+        filterProducts.forEach((item) => {
   
             displayItems(item);
               
@@ -121,16 +125,105 @@ function filterIt(){
 
         console.log(filteredItems);
 
-    });
+    });*/
 
     filterForm.addEventListener("submit", (ev)=>{
 
-        
+        ev.preventDefault();
+
+        const newCatInstrument = filterFormInstrument.value;
+        const newCatManufacturer = filterFormManufacturer.value;
+        const newCatBody = filterFormBody.value;
+        const newCatColor = filterFormColor.value;
+
+        let instrumentArr = [];
+        let manufacturerArr = [];
+        let bodyArr = [];
+        let colorArr = [];
+
+            if(newCatInstrument == "Any"){
+
+                instrumentArr = productArr;
+
+            }
+
+            else if(newCatInstrument !== "Any"){
+
+                (newCatInstrument == "Guitars") ? categoryToFilter = "Guitar" : null;
+                (newCatInstrument == "Basses") ? categoryToFilter = "Bass" : null;
+                (newCatInstrument == "Amps") ? categoryToFilter = "Amp" : null;
+                (newCatInstrument == "Accesories") ? categoryToFilter = "Accesory" : null;
+
+                instrumentArr = productArr.filter((item) => item.instrument === categoryToFilter);
+
+            }
+
+            if(newCatManufacturer == "Any"){
+
+                manufacturerArr = productArr
+
+            }
+
+            else if(newCatManufacturer !== "Any"){
+
+                manufacturerArr = productArr.filter((item) => item.manufacturer === newCatManufacturer);
+
+            }
+
+            if(newCatBody == "Any"){
+
+                bodyArr = productArr;
+
+            }
+
+            else if(newCatBody !== "Any"){
+
+                bodyArr = productArr.filter((item) => item.body === newCatBody);
+
+            }
+
+            
+            if(newCatColor == "Any"){
+
+                colorArr = productArr;
+
+            }
+
+            else if(newCatColor !== "Any"){
+
+                colorArr = productArr.filter((item) => item.color === newCatColor);
+
+            }
+
+            /*console.log(instrumentArr);
+            console.log(manufacturerArr);
+            console.log(bodyArr);
+            console.log(colorArr);*/
+
+            itemsArea.innerHTML = "";
+
+            filterProductsInstMan = instrumentArr.filter(v => manufacturerArr.includes(v));
+            filterProductsBodCol = bodyArr.filter(v => colorArr.includes(v));
+
+            filterProducts = filterProductsInstMan.filter(v => filterProductsBodCol.includes(v));
+
+            console.log(filterProductsInstMan);
+            console.log(filterProductsBodCol);
+
+            console.log(filterProducts);
+
+                
+            filterProducts.forEach((item) => {
+    
+                displayItems(item);
+                
+            });
 
     });
 
 }
 
 export{
-    filterIt
+    filterIt,
+    filterProducts
 }

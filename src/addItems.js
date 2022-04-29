@@ -4,8 +4,11 @@ import {app} from "./firebase_app";
 import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 import { doc, setDoc } from "firebase/firestore";
+import { getStorage } from "firebase/storage";
+
 
 const db = getFirestore(app);
+const storage = getStorage(app);
 
 const addItemsForm = document.getElementById("form_addItems");
 

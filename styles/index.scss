@@ -606,27 +606,47 @@ nav{
     }
 
     .navbar__deals__label{
-        font-size: 1em;
-        margin: 0 2em;
-        color: $yellowCol;
-        &:hover{
+            font-size: 1em;
+            margin: 0 2em;
+            color: $yellowCol;
+            &:hover{
 
-            cursor: pointer;
-            text-decoration: underline;
+                cursor: pointer;
+                text-decoration: underline;
 
-            > .navbar__catDeals__newDeals{
-                display: block;
-                background-color: $yellowCol;
-                border-radius: 10px;
+                > .navbar__catDeals__newDeals{
+                    display: block;
+                    background-color: $yellowCol;
+                    border-radius: 10px;
+                }
+
             }
-
-        }
     }
     .navbar_icons_div{
         .navbar__icons{
             @include inlineBlock();
             list-style: none;
             transition: transform .2s;
+
+            .navbar_user_item{
+
+                font-size: 1em;
+                margin: 0 2em;
+                color: $yellowCol;
+                &:hover{
+    
+                    cursor: pointer;
+                    text-decoration: underline;
+    
+                    > .navbar_user_item_list{
+                        display: block;
+                        background-color: $yellowCol;
+                        border-radius: 10px;
+                    }
+    
+                }
+
+            }
 
             &_button{
                 background: none;
