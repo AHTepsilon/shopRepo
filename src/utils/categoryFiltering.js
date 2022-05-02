@@ -24,109 +24,6 @@ let filterProducts;
 
 function filterIt(){
 
-    /*filterFormInstrument.addEventListener("change", (ev) =>{
-
-        console.log(ev);
-
-        const newChangeInst = filterFormInstrument.value;
-
-        let categoryToFilter;
-        let filteredItems = [];
-
-        if(newChangeInst !== "Any") {
-            
-            (newChangeInst == "Guitars") ? categoryToFilter = "Guitar" : null;
-            (newChangeInst == "Basses") ? categoryToFilter = "Bass" : null;
-            (newChangeInst == "Amps") ? categoryToFilter = "Amp" : null;
-            (newChangeInst == "Accesories") ? categoryToFilter = "Accesory" : null;
-    
-            filteredItems = productArr.filter((item) => item.instrument === categoryToFilter);
-    
-            console.log(filteredItems);
-        }
-
-        else {
-
-            filterProducts = productArr;
-
-        }
-
-        itemsArea.innerHTML = "";
-    
-        filteredItems.forEach((item) => {
-
-            displayItems(item);
-            
-        });
-
-
-    });
-
-    filterFormManufacturer.addEventListener("change", (ev) =>{
-
-        const newChangeMan = filterFormManufacturer.value;
-        let filteredItems = [];
-
-        console.log(newChangeMan);
-
-        (newChangeMan !== "Any") ?
-        filterProducts = productArr.filter((item) => item.manufacturer === newChangeMan) :
-          filteredItems = productArr;
-
-        itemsArea.innerHTML = "";
-    
-        filterProducts.forEach((item) => {
-  
-            displayItems(item);
-              
-        });
-
-        console.log(filteredItems);
-
-    });
-
-    filterFormBody.addEventListener("change", (ev) =>{
-
-        const newChangeBod = filterFormBody.value;
-        let filteredItems = [];
-
-        (newChangeBod !== "Any") ?
-         filteredItems = productArr.filter((item) => item.body === newChangeBod) :
-          filteredItems = productArr;
-
-        itemsArea.innerHTML = "";
-    
-        filteredItems.forEach((item) => {
-  
-            displayItems(item);
-              
-        });
-
-        console.log(filteredItems);
-
-    });
-    
-    filterFormColor.addEventListener("change", (ev) =>{
-
-        const newChangeCol = filterFormColor.value;
-        let filteredItems = [];
-
-        (newChangeCol !== "Any") ?
-         filteredItems = productArr.filter((item) => item.color === newChangeCol) :
-          filteredItems = productArr;
-
-        itemsArea.innerHTML = "";
-    
-        filteredItems.forEach((item) => {
-  
-            displayItems(item);
-              
-        });
-
-        console.log(filteredItems);
-
-    });*/
-
     filterForm.addEventListener("submit", (ev)=>{
 
         ev.preventDefault();
@@ -195,11 +92,6 @@ function filterIt(){
 
             }
 
-            /*console.log(instrumentArr);
-            console.log(manufacturerArr);
-            console.log(bodyArr);
-            console.log(colorArr);*/
-
             itemsArea.innerHTML = "";
 
             filterProductsInstMan = instrumentArr.filter(v => manufacturerArr.includes(v));
@@ -207,11 +99,7 @@ function filterIt(){
 
             filterProducts = filterProductsInstMan.filter(v => filterProductsBodCol.includes(v));
 
-            console.log(filterProductsInstMan);
-            console.log(filterProductsBodCol);
-
             console.log(filterProducts);
-
                 
             filterProducts.forEach((item) => {
     

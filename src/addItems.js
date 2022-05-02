@@ -4,7 +4,7 @@ import {app} from "./firebase_app";
 import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 import { doc, setDoc } from "firebase/firestore";
-import { getStorage } from "firebase/storage";
+import { getStorage, ref, uploadBytes, getDownloadURL } from "firebase/storage";
 
 
 const db = getFirestore(app);
@@ -12,7 +12,7 @@ const storage = getStorage(app);
 
 const addItemsForm = document.getElementById("form_addItems");
 
-let nameValue, instrument, manufacturer, body, price, color, strings, material, id;
+let nameValue, instrument, manufacturer, body, price, color, strings, material, image, id;
 
 
 addItemsForm.addEventListener("submit", async (ev) => {
@@ -27,9 +27,22 @@ addItemsForm.addEventListener("submit", async (ev) => {
     color = document.getElementById("form_addItems_color").value;
     strings = document.getElementById("form_addItems_strings").value;
     material = document.getElementById("form_addItems_material").value;
+    image = document.getElementById("form_addItems_image").files;
+
+    let gallery = [];
+
+    if(image.length){
+
+      const upImages = await uploadImage(storage, [...image]);
+
+      gallery = await Promise.all(upImages);
+
+      console.log(upImages);
+    }
+
     id = await generateId();
 
-    console.log(nameValue + ", " + instrument + ", " + manufacturer + ", " + body + ", " + price + ", " + color+ ", " + strings + ", " + material + ", " + id);
+    console.log(nameValue + ", " + instrument + ", " + manufacturer + ", " + body + ", " + price + ", " + color+ ", " + strings + ", " + material + ", " + image + "," + id);
 
     const newItem = {
 
@@ -41,6 +54,7 @@ addItemsForm.addEventListener("submit", async (ev) => {
         color, 
         strings, 
         material,
+        images: gallery,
         id
 
     }
@@ -62,6 +76,28 @@ async function addItemToDatabase(db, nameValue, manufacturer, body, id, itemSpec
         console.log(error);
 
       }
+}
+
+async function imageUploadRef(storage, image){
+
+  const storRef = ref(storage, `products/images/${image.name}`);
+  return await uploadBytes(storRef, image);
+
+}
+
+async function uploadImage(storage, images = []){
+
+  console.log(images);
+  const imagesUploaded = images.map(async (img) =>{
+
+    const imageRef = await imageUploadRef(storage, img);
+
+    return getDownloadURL(ref(storage, imageRef.ref.fullPath));
+
+  });
+
+  return imagesUploaded;
+
 }
 
 async function generateId(){
