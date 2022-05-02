@@ -1,0 +1,32 @@
+$yellowCol: #FFE70C;
+$blackCol: #000000;
+$whiteCol: #FFFFFF;
+$lightGrayCol: #F1F1F1;
+$darkGrayCol: #6C6C6C;
+
+@mixin inlineBlock{
+    display: flex;
+    flex-direction: row;
+}
+
+@mixin keepInCenter{
+    margin: auto;
+    justify-content: center;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+}
+
+@mixin dropdownExpand{
+
+    display: none;
+
+    &:hover{
+        display: block;
+    }
+}
+
+.product{
+    display: flex;
+    align-items: center;
+}

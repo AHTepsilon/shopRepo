@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BOMBHEAD | Quality guitars at the best price</title>
     <link rel="stylesheet" href="./styles/_globals.scss">
-    <link rel="stylesheet" href="styles/shoppingCart.scss">
+    <link rel="stylesheet" href="./styles/product.scss">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
@@ -56,72 +56,28 @@
             </div>
         </nav>
     </header>
+    
+    <section class="product">
 
-    <div class="spTitle">
-        <h2>SHOPPING CART</h2>
-    </div>
+        <div class="product_assets" id="product_assets">
+            <h1 class="product_name">
 
-    <section>
-        <div id="navi_section" class="navi_section">
+            </h1>
+            <p class="product_desc">
 
-            <div id="navi_section_shopping_cart" class="navi_section_shopping_cart navi_section_item">
-                <a href=""><p>SHOPPING CART</p></a>
-            </div>
+            </p>
+            <h3 class="product_price">
 
-            <div id="navi_section_saved_items" class="navi_section_saved_items navi_section_item">
-                <a href=""><p>SAVED ITEMS</p></a>
-            </div>
+            </h3>
+            <button class="product_cart"></button>
+        </div>
 
-            <div id="navi_section_wishlist" class="navi_section_wishlist navi_section_item">
-               <a href=""><p>WISHLIST</p></a>
-            </div>
+        <div class="product_info" id="product_info">
 
         </div>
-        <div id="item_list" class="item_list">
-            
-        </div>
-        <div id="total_price_div" class="total_price_div">
-
-            <h2>TOTAL</h2>
-            <h2 id="final_price" class="final_price">0.00</h2>
-
-        </div>
-        <div id="checkout_button" class="checkout_button">
-
-            <a href="./paymentPage.html" class="checkout_button_a">PROCEED TO CHECKOUT ></a>
-
-        </div>
+        
     </section>
 
-    <footer> <!--Last two sections / Footer area-->
-        <section class="footer_section_1">
-            <p id="footer_section_1_text_left">
-                <a href="" class="footerHL">About Us</a> <br>
-                <a href="" class="footerHL">Sales</a> <br>
-                <a href="" class="footerHL">Environment and Social</a> <br>
-                <a href="" class="footerHL">FAQ</a> <br>
-                <a href="" class="footerHL">Why Choose BOMBHEAD</a> <br>
-            </p>
-
-            <p id="footer_section_1_text_right">
-                <a href="" class="footerHL">Free Shipping Policy</a> <br>
-                <a href="" class="footerHL">Orders</a> <br>
-                <a href="" class="footerHL">Return Policy</a> <br>
-                <a href="" class="footerHL">Sales Policy</a> <br>
-                <a href="" class="footerHL">Contact Us</a> <br>
-            </p>
-        </section>
-        <section class="footer_section_2">
-            <div class="footer_section_2_icons_div">
-                <a href="" class="social_media_hyperlink"><img src="img/icons/social_media/facebook.png" alt="facebook logo"></a>
-                <a href="" class="social_media_hyperlink"><img src="img/icons/social_media/twitter.png" alt="twitter logo"></a>
-                <a href="" class="social_media_hyperlink"><img src="img/icons/social_media/youtube.png" alt="youtube logo"></a>
-                <a href="" class="social_media_hyperlink"><img src="img/icons/social_media/instagram.png" alt="instagram logo"></a>
-            </div>
-            <p class="footer_section_2_text">2022 BOMBHEAD - All rights reserved</p>
-        </section>
-    </footer>
-
-    <script src="./src/shoppingCart.js"></script>
+    <script src="./src/product.js" type="module"></script>
 </body>
 </html>
