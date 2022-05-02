@@ -2,15 +2,18 @@ import { doc, onSnapshot,  getFirestore, setDoc, getDoc, collection } from "fire
 import {firebaseConfig, firebase} from "./firebase_app";
 import {app} from "./firebase_app";
 import { initializeApp } from "firebase/app";
-import { getProducts } from "./utils/collectionReef";
 
-const productSection = document.getElementById("section__new_deals_div_product_showcase");
+const app = initializeApp(firebaseConfig);
+const auth = getAuth();
 const db = getFirestore(app);
+const storage = getStorage(app);
 
-async function fetchProducts(){
+export{
 
-    await getProducts(db);
+    app,
+    auth,
+    db
 
 }
 
-fetchProducts();
+
