@@ -102,74 +102,29 @@ section{
             bottom: 10px;
             text-align: left;
             text-decoration: none;
-            color: $yellowCol;
-            top: 270px;
+            color: $blackCol;
+            top: 380px;
         }
 
         .product_price{
 
-            @mixin productPricesYeah {
-                font-size: 32px;
-                width: 140px;
-                font-weight: lighter;
-            }
+            font-size: 32px;
+            width: 140px;
+            font-weight: lighter;
 
-            &_1{
-                @include productPricesYeah();
-            }
-
-            &_2{
-                @include productPricesYeah();
-            }
-
-            &_3{
-                @include productPricesYeah();
-            }
-
-            &_4{
-                @include productPricesYeah();
-            }
-
-            &_5{
-                @include productPricesYeah();
-            }
         }
 
         .product_name{
 
-            @mixin productNamesYeah {
-                line-height: 20px;
-                width: 220px;
-                font-size: 12px;
-            }
-
-            &_1{
-                @include productNamesYeah();
-            }
-
-            &_2{
-                @include productNamesYeah();
-            }
-
-            &_3{
-                @include productNamesYeah();
-            }
-
-            &_4{
-                @include productNamesYeah();
-            }
-
-            &_5{
-                @include productNamesYeah();
-            }
+            line-height: 20px;
+            width: 220px;
+            font-size: 18px;
         }
+}
 
-        .guitarPhoto{
-            width: 140px;
-            height: 400px;
-            background: linear-gradient(0deg, #000000 0%, rgba(0, 0, 0, 0) 67.98%),
-        }
-
+.guitarPhoto{
+    width: 200px;
+    height: 400px;
 }
 
 .loader {
