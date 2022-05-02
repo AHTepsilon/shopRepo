@@ -32,7 +32,7 @@
                             <li class="block_list_element"><a href="" class="list_element">Accesories</a></li>
                         </ul>
                     </li>
-                    <li class="navbar__deals__label catDeals_item">NEW DEALS 
+                    <li class="navbar__deals__label catDeals_item"><a href="./itemShop.html">NEW DEALS</a>
                         <ul class="navbar__catDeals__newDeals">
                             <li><a href="" class="list_element">Daily Offers</a></li>
                             <li><a href="" class="list_element">Seasonal Offers</a></li>
@@ -46,7 +46,12 @@
                 <ul class="navbar__icons">
                     <li><a href="./shoppingCart.html"><button id="navbar__icons_button" class="navbar__icons_button" id="shopping_cart_button"><img src="img/icons/shopping_cart.png"></button></a></li>
                     <li><button class="navbar__icons_button" id="notif_button"><img src="img/icons/notification/notif_icon.png"></button></li>
-                    <li><a href="./loginPage.html"><button class="navbar__icons_button" id="user_button"><img src="img/icons/user/user_icon.png"></button></a></li>
+                    <li class="navbar_user_item"><button class="navbar__icons_button" id="user_button"><img src="img/icons/user/user_icon.png">
+                        <ul class="navbar_user_item_list">
+                            <li><a href="" class="list_element">Login</a></li>
+                            <li><a href="" class="list_element">Register</a></li>
+                        </ul>
+                    </li>
                 </ul>
             </div>
             
@@ -101,45 +106,11 @@
                 <img src="./img/icons/arrows/left_chevron_yellow.png" alt="" class="left_chevron_yellow_img">
             </div>
             <div class="section__new_deals_div">
-                <a href = " ">
+                <div>
                     <div class="section__new_deals_div_product_showcase" id="section__new_deals_div_product_showcase">
-                    <!--   <div class="product_1 product">
-                            <div class="section__new_deals_div_product_showcase_text">
-                                <h2 class="product_price_1">$299.99</h2>
-                                <p class="product_name_1">Gibson Junior Les Paul Solid Color</p>
-                            </div>
-                            <img src="img/products/lespaul1.png" alt="" class="guitarPhoto">
-                        </div>
-                        <div class="product_2 product">
-                            <div class="section__new_deals_div_product_showcase_text">
-                                <h2 class="product_price_2">$399.99</h2>
-                                <p class="product_name_2">Epiphone Les Paul - White or Black</p>
-                            </div>
-                            <img src="img/products/lespaul2.png" alt="" class="guitarPhoto">
-                        </div>
-                        <div class="product_3 product">
-                            <div class="section__new_deals_div_product_showcase_text">
-                                <h2 class="product_price_3">$159.99</h2>
-                                <p class="product_name_3">Epiphone Les Paul Special Satin E1 - Black</p>
-                            </div>
-                            <img src="img/products/lespaul3.png" alt="" class="guitarPhoto">
-                        </div>
-                        <div class="product_4 product">
-                            <div class="section__new_deals_div_product_showcase_text">
-                                <h2 class="product_price_4">$159.99</h2>
-                                <p class="product_name_4">Squier Affinity Telecaster - Sunburst</p>
-                            </div>
-                            <img src="img/products/telecaster1.png" alt="" class="guitarPhoto">
-                        </div>
-                        <div class="product_5 product">
-                            <div class="section__new_deals_div_product_showcase_text">
-                                <h2 class="product_price_5">$199.99</h2>
-                                <p class="product_name_5">Ibanez AX120 - Solid Colors with Maple</p>
-                            </div>
-                            <img src="img/products/AX120.png" alt="" class="guitarPhoto">
-                        </div>--> 
+                        <div class="loader"></div>
                     </div>
-                </a>
+                </div>
             </div>
             <div class="section__new_deals_right_arrow">
                 <img src="./img/icons/arrows/right_chevron_yellow.png" alt="" class="right_chevron_yellow_img">
@@ -287,5 +258,6 @@
     </script>
 
     <script src="./src/firebase_app.js" type="module"></script>
+    <script src="./src/itemShowcase.js" type="module"></script>
 </body>
 </html>

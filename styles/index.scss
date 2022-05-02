@@ -128,9 +128,11 @@ p{
         .product{
             margin: 0 3em;
             transition: transform .2s;
+            display: block;
 
             &:hover{
                 transform: scale(1.2);
+                cursor: pointer;
 
                 >.section__new_deals_div_product_showcase_text{
                     display: block;
@@ -210,11 +212,26 @@ p{
     }
 
     .guitarPhoto{
-        width: 100%;
-        height: 100%;
+        width: 140px;
+        height: 400px;
         background: linear-gradient(0deg, #000000 0%, rgba(0, 0, 0, 0) 67.98%),
     }
 }
+
+.loader {
+    border: 16px solid $yellowCol; /* Light grey */
+    border-top: 16px solid $blackCol; /* Blue */
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+    @include keepInCenter();
+  }
+    
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
 
 .section__search_by_category_logos_group{
     display: flex;
@@ -589,27 +606,47 @@ nav{
     }
 
     .navbar__deals__label{
-        font-size: 1em;
-        margin: 0 2em;
-        color: $yellowCol;
-        &:hover{
+            font-size: 1em;
+            margin: 0 2em;
+            color: $yellowCol;
+            &:hover{
 
-            cursor: pointer;
-            text-decoration: underline;
+                cursor: pointer;
+                text-decoration: underline;
 
-            > .navbar__catDeals__newDeals{
-                display: block;
-                background-color: $yellowCol;
-                border-radius: 10px;
+                > .navbar__catDeals__newDeals{
+                    display: block;
+                    background-color: $yellowCol;
+                    border-radius: 10px;
+                }
+
             }
-
-        }
     }
     .navbar_icons_div{
         .navbar__icons{
             @include inlineBlock();
             list-style: none;
             transition: transform .2s;
+
+            .navbar_user_item{
+
+                font-size: 1em;
+                margin: 0 2em;
+                color: $yellowCol;
+                &:hover{
+    
+                    cursor: pointer;
+                    text-decoration: underline;
+    
+                    > .navbar_user_item_list{
+                        display: block;
+                        background-color: $yellowCol;
+                        border-radius: 10px;
+                    }
+    
+                }
+
+            }
 
             &_button{
                 background: none;

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>BOMBHEAD | Quality guitars at the best price</title>
+        <link rel="stylesheet" href="styles/itemShop.scss">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="styles/mediaqueries.css">
+    </head>
+<body>
+    <header> <!--Header / navigation bar-->
+        <nav>
+            <div class="navbar_logo_div">
+                <a href="./index.html">
+                    <img src="img/logos/Logo.png" class="bombhead__logo">
+                </a>
+            </div>
+
+            <div class="catDeals__div">
+                <ul class="navbar__catDeals catDeals_item">
+                    <li class="navbar__cat__label">CATEGORIES
+                        <ul class="navbar__catDeals__categories">
+                            <li class="block_list_element"><a href=""  class="list_element">Guitars</a></li>
+                            <li class="block_list_element"><a href="" class="list_element">Basses</a></li>
+                            <li class="block_list_element"><a href="" class="list_element">Accoustic Guitars</a></li>
+                            <li class="block_list_element"><a href="" class="list_element" >Amps</a></li>
+                            <li class="block_list_element"><a href="" class="list_element">Accesories</a></li>
+                        </ul>
+                    </li>
+                    <li class="navbar__deals__label catDeals_item"><a href="./itemShop.html">NEW DEALS</a>
+                        <ul class="navbar__catDeals__newDeals">
+                            <li><a href="" class="list_element">Daily Offers</a></li>
+                            <li><a href="" class="list_element">Seasonal Offers</a></li>
+                        </ul>
+                    </li>
+                    <li class="navbar__addItem__label catDeals_item"> <a href="./addItems.html">ADD PRODUCT</a></li>
+                </ul>
+            </div>
+
+            <div class="navbar_icons_div">
+                <ul class="navbar__icons">
+                    <li><a href="./shoppingCart.html"><button id="navbar__icons_button" class="navbar__icons_button" id="shopping_cart_button"><img src="img/icons/shopping_cart.png"></button></a></li>
+                    <li><button class="navbar__icons_button" id="notif_button"><img src="img/icons/notification/notif_icon.png"></button></li>
+                    <li><a href="./loginPage.html"><button class="navbar__icons_button" id="user_button"><img src="img/icons/user/user_icon.png"></button></a></li>
+                </ul>
+            </div>
+            
+            <div class="burger_menu_div">
+                <li><button class="navbar__icons_button" id="menu_button"><img src="img/icons/menu.png" class="menu_icon"></button></li>
+            </div>
+        </nav>
+    </header>
+
+    <section class="category">
+
+        <div class="category_changer" id="category_changer">
+            <form action="" class="category_changer_form" id="category_changer_form">
+                <div class="category_changer_form_div">
+                    <p>Product</p>
+                    <select name="Instrument" id="instrument-querier" value="Instrument">
+                        <option value="Any">Any</option>
+                        <option value="Guitars">Guitars</option>
+                        <option value="Basses">Basses</option>
+                        <option value="Amps">Amps</option>
+                        <option value="Accesories">Accesories</option>
+                    </select>
+                </div>
+                <div class="category_changer_form_div">
+                    <p>Manufacturer</p>
+                    <select name="Manufacturer" id="manufacturer-querier" value="Manufacturer">
+                        <option value="Any">Any</option>
+                        <option value="Fender">Fender</option>
+                        <option value="Gibson">Gibson</option>
+                        <option value="Ibanez">Ibanez</option>
+                        <option value="Epiphone">Epiphone</option>
+                        <option value="Squier">Squier</option>
+                        <option value="Peavey">Peavey</option>
+                        <option value="Rickenbacker">Rickenbacker</option>
+                        <option value="Jackson">Jackson</option>
+                        <option value="Ernie Ball">Ernie Ball</option>
+                    </select>
+                </div>
+                <div class="category_changer_form_div">
+                    <p>Body</p>
+                    <select name="Body" id="body-querier" value="Body">
+                        <option value="Any">Any</option>
+                        <option value="Stratocaster">Stratocaster</option>
+                        <option value="Les Paul">Les Paul</option>
+                        <option value="Telecaster">Telecaster</option>
+                        <option value="Jazzmaster">Jazzmaster</option>
+                        <option value="Offset">Offset</option>
+                        <option value="SG">SG</option>
+                        <option value="Others (Guitars)">Others (Guitars)</option>
+                        <option value="Doublecut">Doublecut</option>
+                        <option value="Jazz">Jazz</option>
+                        <option value="Precision Bass">Precision Bass</option>
+                        <option value="Offset">Offset</option>
+                        <option value="SR">SR</option>
+                        <option value="Others (Basses)">Others (Basses)</option>
+                    </select>
+                </div>
+                <div class="category_changer_form_div">
+                    <p>Color</p>
+                    <select name="Color" id="color-querier" value="Color">
+                        <option value="Any">Any</option>
+                        <option value="Red">Red</option>
+                        <option value="Blue">Blue</option>
+                        <option value="White">White</option>
+                        <option value="Black">Black</option>
+                        <option value="Yellow">Yellow</option>
+                        <option value="Green">Green</option>
+                        <option value="Orange">Orange</option>
+                        <option value="Pink">Pink</option>
+                        <option value="Cream">Cream</option>
+                        <option value="Multiple Colors">Multiple Colors</option>
+                        <option value="Sunburst">Sunburst</option>
+                        <option value="Others">Others</option>
+                    </select>
+                </div>
+                <input type="submit" class="submit_button" value="Search">
+            </form>
+        </div>
+    </section>
+
+    <section class="showcase">
+        <div class="section__new_deals_div_product_showcase" id="section__new_deals_div_product_showcase">
+            <div class="loader"></div>
+        </div>
+    </section>
+
+    <script src="src/itemShowcase.js" type="module"></script>
+</body>
+</html>
