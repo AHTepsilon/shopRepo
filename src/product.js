@@ -5,6 +5,7 @@ import {app} from "./firebase_app";
 import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 import { doc, setDoc } from "firebase/firestore";
+import {getProduct} from "./utils/getProduct";
 
 const db = getFirestore(app);
 
@@ -12,7 +13,7 @@ const productAssestsArea = document.getElementById("product_assets");
 const productInfoArea = document.getElementById("product_info");
 
 
-function getParam(){
+function getParam(param){
 
     const url = window.location.search;
     const searchParams = new URLSearchParams(url);
@@ -21,21 +22,10 @@ function getParam(){
 
 }
 
-async function getProduct(){
+async function loadProduct(){
 
     const productId = getParam("id");
-    const docRef = doc(db, "items", id);
-
-    try{
-        const docSnap = await getDoc(docRef);
-        const data = docSnap.data();
-
-    }
-
-    catch(e){
-
-        console.log(e);
-    }
+    const data = await getProduct(productId);
 
 
     const product = {
@@ -49,21 +39,27 @@ async function getProduct(){
 
 function renderProduct(product){
 
-productAssestsArea.innerHTML = `
+    productAssestsArea.innerHTML = `
+    
+    <img class="product_image" id="pImage" src="${product.images[0]}">
 
-    <h1 class="product_name">
-    ${product.nameValue}
-    </h1>
-    <p class="product_desc">
-    lorem ipsum
-    </p>
-    <h3 class="product_price">
-    ${product.price}
-    </h3>
-    <button class="product_cart">Add to cart</button>
+    `;
 
-`;
+    productInfoArea.innerHTML = `
+
+        <h1 class="product_name">
+        ${product.nameValue}
+        </h1>
+        <p class="product_desc">
+        lorem ipsum
+        </p>
+        <h3 class="product_price">
+        ${product.price}
+        </h3>
+        <button class="product_cart">Add to cart</button>
+
+    `;
 
 }
 
-getProduct("id");
+loadProduct();

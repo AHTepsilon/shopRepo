@@ -40,6 +40,7 @@ function displayItems(item){
     product.className = "product";
     
     product.setAttribute("href", `./product.html?id=${item.id}`);
+
     const placeholder = item.images ? item.images[0] : "https://www.unfe.org/wp-content/uploads/2019/04/SM-placeholder-1024x512.png"
 
     product.innerHTML = `
@@ -49,6 +50,7 @@ function displayItems(item){
     <p class="product_name" id="product_name">${item.nameValue}</p>
     </div>
     <img src="${placeholder}" alt="product_pic" class="product_image guitarPhoto" id="product_image">
+    <button class="add_cart_button" id="add_cart_button">Add to cart</button>
 
     `;
 
@@ -56,14 +58,22 @@ function displayItems(item){
 
 }
 
+let addCartBtn = document.querySelector(".add_cart_button");
+
+addCartBtn.addEventListener("click", (ev)=>{
+
+    ev.preventDefault();
+    console.log(ev);
+
+});
+
 export{
 
     productArr,
     displayItems,
-    itemsArea
+    itemsArea,
         
 }
-
 getItems();
 
-filterIt();
+//filterIt();
