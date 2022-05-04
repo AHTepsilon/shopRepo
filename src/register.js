@@ -86,6 +86,8 @@ async function addUserToDatabase(db, userId, userInfo){
       try{
 
         await setDoc(doc(db, "users", userId), userInfo);
+        alert("User created");
+        goToLanding();
 
       }
 
@@ -96,8 +98,8 @@ async function addUserToDatabase(db, userId, userInfo){
       }
 }
 
-async function goToLanding(){
+function goToLanding(){
 
-    window.location.href = "./index.html"
+    window.location.href = "./index.html";
 
 }

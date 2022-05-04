@@ -25,6 +25,7 @@ async function login(email, password){
     try{
 
         const { user } = await signInWithEmailAndPassword(auth, email, password);
+        goToLanding();
 
         alert("Login successful");
 
@@ -47,5 +48,11 @@ async function login(email, password){
         }
 
     }
+
+}
+
+function goToLanding(){
+
+    window.location.href = "./index.html";
 
 }
