@@ -111,6 +111,8 @@ function filterIt(){
 
 }
 
+filterIt();
+
 export{
     filterIt,
     filterProducts
