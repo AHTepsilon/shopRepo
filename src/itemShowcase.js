@@ -10,6 +10,7 @@ import { collection, getDocs } from "firebase/firestore";
 
 import { fetchItems } from "./utils/item";
 
+import { getFirebaseCart, createFirebaseCart } from "./utils/cartFunction";
 
 const db = getFirestore(app);
 const auth = getAuth();
@@ -100,7 +101,7 @@ async function addToCart(){
 
 }
 
-function getCart(){
+function getLocalCart(){
     
     const localCart = localStorage.getItem("cart");
     return localCart ? JSON.parse(localCart) : [];
@@ -117,7 +118,7 @@ onAuthStateChanged(auth, async (user) =>{
     }
 
     else{
-        shoppingCart = getCart();
+        shoppingCart = getLocalCart();
     }
 });
 
@@ -129,4 +130,5 @@ export{
     itemsArea,
         
 }
+
 getItems();
