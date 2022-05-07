@@ -26,7 +26,39 @@ $darkGrayCol: #6C6C6C;
     }
 }
 
+
+h1{
+    font-family: 'Bebas Neue', cursive;
+    font-size: 3em;
+}
+
+h3{
+    font-family: 'Bebas Neue', cursive;
+    font-size: 2em;
+}
+
+p{
+    font-family: 'Baloo Tammudu 2', cursive;
+}
+
+
 .product{
     display: flex;
     align-items: center;
+
+    margin: 100px;
+
+    .product_image{
+
+        object-fit: contain;
+        width: 250px;   
+    
+    }
+
+    .product_name{
+
+
+    }
 }
+
+

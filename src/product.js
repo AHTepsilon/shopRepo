@@ -6,7 +6,6 @@ import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 import { doc, setDoc } from "firebase/firestore";
 import {getProduct} from "./utils/getProduct";
-
 const db = getFirestore(app);
 
 const productAssestsArea = document.getElementById("product_assets");
@@ -54,7 +53,7 @@ function renderProduct(product){
         lorem ipsum
         </p>
         <h3 class="product_price">
-        ${product.price}
+        ${product.price}.00$
         </h3>
         <button class="product_cart">Add to cart</button>
 
