@@ -55,6 +55,36 @@ section{
 
     .item_list{
         margin: 10em;
+
+        display: flex;
+        flex-direction: column;
+
+        .cart_item{
+
+            display: flex;
+            flex-direction: row;
+                    
+            .product_price{
+
+                font-size: 32px;
+                width: 140px;
+                font-weight: lighter;
+
+            }
+
+            .product_name{
+
+                line-height: 20px;
+                width: 220px;
+                font-size: 18px;
+            }
+            
+        }
+        .product_image{
+            width: 200px;
+            height: 400px;
+        }
+
     }
 
     .total_price_div{
