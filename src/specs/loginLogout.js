@@ -1,3 +1,5 @@
+import { app } from "../firebase_app"
+
 import { getAuth, onAuthStateChanged } from "firebase/auth";
 import { getAuth, signOut } from "firebase/auth";
 
