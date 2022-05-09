@@ -1,4 +1,33 @@
+@media all and (max-width: 1575px) {
+
+    .slider{
+        height: 35em;
+    }
+
+}
+
+@media all and (max-width: 1500px) {
+
+    .slider{
+        height: 35em;
+    }
+
+}
+
+
+@media all and (max-width: 1329px) {
+
+    .slider{
+        height: 35em;
+    }
+
+}
+
 @media all and (max-width: 1074px) {
+
+    .slider{
+        height: 25em;
+    }
     
     .slider__text__title{
         font-size: 40px;
