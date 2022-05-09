@@ -1,9 +1,19 @@
+import { jsPDF } from "jspdf";
+
 const billingInfoForm = document.getElementById("billing_info_div_form");
 const paymentInfoDiv = document.getElementById("payment_info_div_credit_card_form");
 const proceedBtn = document.getElementById("next_confirm_button");
 
 let fName, lName, mail, add, pNumb, zip;
 let ccNum, ccName, ccDate, ccCode;
+
+const receipt = new jsPDF({
+
+    orientation: "vertical",
+    units: "mm",
+    format: [215, 275]
+
+});
 
 let dataArr = [];
 
@@ -32,6 +42,10 @@ proceedBtn.addEventListener("click", ev=>{
 
             alert("Payment performed successfully!");
             console.log(dataArr);
+
+            receipt.text("\n" + "Buyer's name: " + fName + "\n" + "Buyer's last name: " + lName + "\n" + "Email: " + mail + "\n" + "Shipping Address: " + add + "\n" + "Phone Number: " + pNumb + "\n" + "Zip Code: " + zip, 1, 1);
+
+            receipt.save("Receipt.pdf");
         }
 
 });
