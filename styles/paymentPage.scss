@@ -106,6 +106,36 @@ section{
 
         }
 
+        .proceed_to_confirmation{
+
+            margin-top: 50px;
+
+            .next_confirm_button{
+
+                width: 200px;
+                height: 30px;
+
+                background-color: $blackCol;
+                color: $yellowCol;
+
+                font-family: 'Baloo Tammudu 2', cursive;
+
+                border-radius: 10px;
+                border: none;
+
+                &:hover{
+
+                    cursor: pointer;
+
+                    background-color: $whiteCol;
+                    color: $blackCol;
+
+                }
+
+            }
+
+        }
+
     }
 
 }
