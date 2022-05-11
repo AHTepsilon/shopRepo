@@ -1,12 +1,7 @@
-import { getAuth, createUserWithEmailAndPassword, onAuthStateChanged } from "firebase/auth";
-import {firebaseConfig, firebase} from "./firebase_app";
+import { getAuth, onAuthStateChanged } from "firebase/auth";
 import {app} from "./firebase_app";
-import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
-import { doc, setDoc } from "firebase/firestore";
 import {createFirebaseCart, getFirebaseCart} from "./utils/cartFunction";
-
-import { collection, getDocs } from "firebase/firestore";
 
 import { fetchItems } from "./utils/item";
 

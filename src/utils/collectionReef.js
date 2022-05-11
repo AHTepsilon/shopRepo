@@ -1,6 +1,6 @@
 import { collection, getDocs } from "@firebase/firestore";
 
-function getProducts(db){
+async function getProducts(db){
 
     const collectionRef = collection(db, "items");
     const {docs} = await getDocs(collectionRef);

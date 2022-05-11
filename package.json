@@ -18,7 +18,8 @@
   },
   "homepage": "https://github.com/AHTepsilon/shopRepo#readme",
   "dependencies": {
-    "firebase": "^9.6.11"
+    "firebase": "^9.6.11",
+    "jspdf": "^2.5.1"
   },
   "devDependencies": {
     "@parcel/transformer-sass": "^2.4.1",
