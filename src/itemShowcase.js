@@ -1,37 +1,19 @@
-import { getAuth, onAuthStateChanged } from "firebase/auth";
-import {app} from "./firebase_app";
 import { getFirestore } from "firebase/firestore";
 import {createFirebaseCart, getFirebaseCart} from "./utils/cartFunction";
 
 import { fetchItems } from "./utils/item";
 
-
-const db = getFirestore(app);
-const auth = getAuth();
-
-const itemsArea = document.getElementById("section__new_deals_div_product_showcase");
-
-let userHasLoggedIn = undefined;
-let productArr = [];
-let shoppingCart = [];
-
-async function getItems(){
-
-    const firebaseProducts = await fetchItems(db);
-    itemsArea.innerHTML = "";
-    console.log(firebaseProducts);
-
-    firebaseProducts.forEach(product =>{
-
-        displayItems(product);
-
-    });
-
-    productArr = firebaseProducts;
+async function getItems(db) {
+    try {
+        const firebaseProducts = await fetchItems(db);
+        return firebaseProducts;
+    } catch(e) {
+        console.log(e);
+    }
 
 }
 
-function displayItems(item){
+function displayItems(item, shoppingCart, itemsArea){
 
     const product = document.createElement("a");
     product.className = "product";
@@ -101,27 +83,10 @@ function getCart(){
     return localCart ? JSON.parse(localCart) : [];
 }
 
-onAuthStateChanged(auth, async (user) =>{
-
-    console.log(user);
-
-    if(user){
-        userHasLoggedIn = user;
-        shoppingCart = await getFirebaseCart(db, userHasLoggedIn.uid);
-        
-    }
-
-    else{
-        shoppingCart = getCart();
-    }
-});
-
-
 export{
-
-    productArr,
+    getItems,
     displayItems,
     itemsArea,
+    getCart
         
 }
-getItems();

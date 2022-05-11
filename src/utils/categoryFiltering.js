@@ -1,10 +1,6 @@
-import {app} from "../firebase_app";
 import { getFirestore } from "firebase/firestore";
 
-import { productArr, displayItems, itemsArea } from "../itemShowcase";
-
-const db = getFirestore(app);
-
+import {displayItems, itemsArea } from "../itemShowcase";
 const filterForm = document.getElementById("category_changer");
 
 const filterFormInstrument = document.getElementById("instrument-querier");
@@ -16,7 +12,7 @@ let filterProductsInstMan = [];
 let filterProductsBodCol = [];
 let filterProducts;
 
-function filterIt(){
+function filterIt(itemsArea, productArr){
 
     filterForm.addEventListener("submit", (ev)=>{
 
@@ -104,8 +100,6 @@ function filterIt(){
     });
 
 }
-
-filterIt();
 
 export{
     filterIt,
