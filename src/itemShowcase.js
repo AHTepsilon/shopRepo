@@ -86,7 +86,6 @@ function getCart(){
 export{
     getItems,
     displayItems,
-    itemsArea,
     getCart
         
 }

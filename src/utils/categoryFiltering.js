@@ -1,22 +1,19 @@
 import { getFirestore } from "firebase/firestore";
 
-import {displayItems, itemsArea } from "../itemShowcase";
-const filterForm = document.getElementById("category_changer");
+import {displayItems} from "../itemShowcase";
 
 const filterFormInstrument = document.getElementById("instrument-querier");
 const filterFormManufacturer = document.getElementById("manufacturer-querier");
 const filterFormBody = document.getElementById("body-querier");
 const filterFormColor = document.getElementById("color-querier");
 
+const itemsArea = document.getElementById("section__new_deals_div_product_showcase");
+
 let filterProductsInstMan = [];
 let filterProductsBodCol = [];
 let filterProducts;
 
-function filterIt(itemsArea, productArr){
-
-    filterForm.addEventListener("submit", (ev)=>{
-
-        ev.preventDefault();
+function filterIt(productArr = []){
 
         const newCatInstrument = filterFormInstrument.value;
         const newCatManufacturer = filterFormManufacturer.value;
@@ -97,11 +94,10 @@ function filterIt(itemsArea, productArr){
                 
             });
 
-    });
-
 }
 
 export{
     filterIt,
-    filterProducts
+    filterProducts,
+    itemsArea
 }

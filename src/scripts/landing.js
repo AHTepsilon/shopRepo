@@ -5,17 +5,17 @@ import { fetchItems } from "../utils/item";
 import { getItems, displayItems, getCart } from "../itemShowcase";
 import { getFirebaseCart } from "../utils/cartFunction";
 import { validate } from "../specs/addProductsValidation";
-import { filterIt } from "../utils/categoryFiltering";
+import { filterIt, itemsArea } from "../utils/categoryFiltering";
+
+const userButton = document.getElementById("user_button");
+const addItemBtn = document.getElementById("navbar__addItem__a");
 
 const db = getFirestore(app);
 const auth = getAuth();
 
-const itemsArea = document.getElementById("section__new_deals_div_product_showcase");
-const userButton = document.getElementById("user_button");
-const addItemBtn = document.getElementById("navbar__addItem__a");
+const filterForm = document.getElementById("category_changer");
 
 let userHasLoggedIn = undefined;
-let productArr = [];
 let shoppingCart = [];
 
 async function loadProducts() {
@@ -72,4 +72,20 @@ addItemBtn.addEventListener("click", (ev) =>{
 
 });
 
-filterIt(itemsArea, productArr);
+try{
+
+    filterForm.addEventListener("submit", ev =>{
+    
+        ev.preventDefault();
+    
+        filterIt(getItems(db));
+    
+    });
+}
+
+catch(e){
+
+    console.log("No object \"filterForm\" found in this document");
+
+}
+

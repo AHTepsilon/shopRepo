@@ -17,6 +17,8 @@ import { fetchItems } from "./utils/item";
 const db = getFirestore(app);
 const auth = getAuth();
 
+const addItemBtn = document.getElementById("navbar__addItem__a");
+
 const itemsArea = document.getElementById("item_list");
 
 let userHasLoggedIn = undefined;
@@ -92,6 +94,12 @@ onAuthStateChanged(auth, async (user) =>{
     else{
         shoppingCart = getCart();
     }
+});
+
+addItemBtn.addEventListener("click", (ev) =>{
+
+    validate(db, auth);
+
 });
 
 getItems();

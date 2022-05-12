@@ -6,11 +6,14 @@ import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 import { doc, setDoc } from "firebase/firestore";
 import {getProduct} from "./utils/getProduct";
+import { validate } from "./specs/addProductsValidation";
+
 const db = getFirestore(app);
 
 const productAssestsArea = document.getElementById("product_assets");
 const productInfoArea = document.getElementById("product_info");
 
+const addItemBtn = document.getElementById("navbar__addItem__a");
 
 function getParam(param){
 
@@ -60,5 +63,11 @@ function renderProduct(product){
     `;
 
 }
+
+addItemBtn.addEventListener("click", (ev) =>{
+
+    validate(db, auth);
+
+});
 
 loadProduct();
