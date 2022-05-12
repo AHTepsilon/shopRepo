@@ -5,17 +5,17 @@ import { fetchItems } from "../utils/item";
 import { getItems, displayItems, getCart } from "../itemShowcase";
 import { getFirebaseCart } from "../utils/cartFunction";
 import { validate } from "../specs/addProductsValidation";
-import { filterIt, itemsArea } from "../utils/categoryFiltering";
-
-const userButton = document.getElementById("user_button");
-const addItemBtn = document.getElementById("navbar__addItem__a");
+import { filterIt } from "../utils/categoryFiltering";
 
 const db = getFirestore(app);
 const auth = getAuth();
 
-const filterForm = document.getElementById("category_changer");
+const itemsArea = document.getElementById("section__new_deals_div_product_showcase");
+const userButton = document.getElementById("user_button");
+const addItemBtn = document.getElementById("navbar__addItem__a");
 
 let userHasLoggedIn = undefined;
+let productArr = [];
 let shoppingCart = [];
 
 async function loadProducts() {
@@ -24,6 +24,13 @@ async function loadProducts() {
     products.forEach(product =>{
         displayItems(product, shoppingCart, itemsArea);
     });
+}
+
+async function loadProductArr(){
+
+    productArr = await getItems(db);
+    filterIt(itemsArea, productArr);
+
 }
 
 onAuthStateChanged(auth, async (user) =>{
@@ -72,20 +79,4 @@ addItemBtn.addEventListener("click", (ev) =>{
 
 });
 
-try{
-
-    filterForm.addEventListener("submit", ev =>{
-    
-        ev.preventDefault();
-    
-        filterIt(getItems(db));
-    
-    });
-}
-
-catch(e){
-
-    console.log("No object \"filterForm\" found in this document");
-
-}
-
+loadProductArr();

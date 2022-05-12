@@ -3,9 +3,12 @@ import {createFirebaseCart, getFirebaseCart} from "./utils/cartFunction";
 
 import { fetchItems } from "./utils/item";
 
+
+
 async function getItems(db) {
     try {
         const firebaseProducts = await fetchItems(db);
+
         return firebaseProducts;
     } catch(e) {
         console.log(e);
@@ -22,11 +25,18 @@ function displayItems(item, shoppingCart, itemsArea){
 
     const placeholder = item.images ? item.images[0] : "https://www.unfe.org/wp-content/uploads/2019/04/SM-placeholder-1024x512.png"
 
-    const cartHasProducts = shoppingCart.some((productCart) =>{
+    let cartHasProducts = [];
 
-        productCart.id === item.id;
+    console.log(shoppingCart);
 
-    });
+    if(shoppingCart.length > 0){
+ 
+        cartHasProducts = shoppingCart.some((productCart) =>{
+
+            productCart.id === item.id;
+
+        });
+    }
 
     const addToCartBtnEnable = cartHasProducts ? 
     `<button class="add_cart_button" id="add_cart_button">Product added to cart</button>` :
