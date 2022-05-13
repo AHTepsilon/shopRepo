@@ -68,6 +68,8 @@ async function addItemToDatabase(db, nameValue, manufacturer, body, id, itemSpec
       try{
 
         await setDoc(doc(db, "items", id), itemSpecs);
+
+        alert("Item added succesfully");
       }
 
       catch(error){

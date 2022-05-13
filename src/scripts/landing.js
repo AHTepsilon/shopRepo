@@ -19,8 +19,10 @@ let productArr = [];
 let shoppingCart = [];
 
 async function loadProducts() {
-    const products = await getItems(db);
 
+    itemsArea.innerHTML = "";
+
+    const products = await getItems(db);
     products.forEach(product =>{
         displayItems(product, shoppingCart, itemsArea);
     });
@@ -28,8 +30,18 @@ async function loadProducts() {
 
 async function loadProductArr(){
 
-    productArr = await getItems(db);
-    filterIt(itemsArea, productArr);
+    
+    try{
+        productArr = await getItems(db);
+        filterIt(itemsArea, productArr);
+        
+    }
+
+    catch(e){
+
+        console.log("Could not find FilterForm in this page");
+
+    }
 
 }
 

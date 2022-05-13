@@ -78,6 +78,7 @@ section{
         display: flex;
         flex-direction: row;
         margin-top: 30px;
+        flex-wrap: wrap;
 
         .product{
             margin: 0 3em;
@@ -103,7 +104,7 @@ section{
             text-align: left;
             text-decoration: none;
             color: $blackCol;
-            top: 380px;
+            top: 440px;
         }
 
         .product_price{
