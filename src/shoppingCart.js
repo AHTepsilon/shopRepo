@@ -1,105 +1,89 @@
-import { getAuth, createUserWithEmailAndPassword, onAuthStateChanged } from "firebase/auth";
+import {getAuth, onAuthStateChanged} from "firebase/auth";
+import {getFirebaseCart, createFirebaseCart} from "./utils/cartFunction";
+import { addToCart, displayItems, getCart } from "./itemShowcase";
+import { doc, onSnapshot,  getFirestore, setDoc, getDoc, collection } from "firebase/firestore";
 import {firebaseConfig, firebase} from "./firebase_app";
 import {app} from "./firebase_app";
 import { initializeApp } from "firebase/app";
-import { getFirestore } from "firebase/firestore";
-import { doc, setDoc } from "firebase/firestore";
 
-import { collection, getDocs } from "firebase/firestore";
-
-import { productArr, displayItems } from "./itemShowcase";
-import {createFirebaseCart, getFirebaseCart} from "./utils/cartFunction";
-
-import { collection, getDoc } from "firebase/firestore";
-
-import { fetchItems } from "./utils/item";
+const cartArea= document.getElementById("item_list");
+const totalArea = document.getElementById("final_price");
+let shoppingCart = [];
 
 const db = getFirestore(app);
 const auth = getAuth();
 
-const addItemBtn = document.getElementById("navbar__addItem__a");
+function loadCart(cart){
 
-const itemsArea = document.getElementById("item_list");
+    let total = 0;
+    cart.forEach(item =>{
 
-let userHasLoggedIn = undefined;
-let productArr = [];
-let shoppingCart = [];
+        displayIt(item);
+        total += parseInt(item.price);
 
-async function getItems(){
+    });
+    
+    totalArea.innerText = total.toString()  + ".00$";
+}
 
-    const firebaseProducts = await fetchItems(db);
-    itemsArea.innerHTML = "";
-    console.log(firebaseProducts);
+async function removeIt(id){
 
-    firebaseProducts.forEach(product =>{
+    const newCart = shoppingCart.filter(item => item.id !== id);
 
-        renderCartItems(product);
+    shoppingCart = newCart;
+
+    if(userHasLoggedIn){
+
+        await createFirebaseCart(db, userHasLoggedIn.uid, newCart);
+
+    }
+
+    addToCart(newCart);
+
+    cartArea.innerHTML = "";
+
+    loadCart(newCart);
+
+}
+
+function displayIt(product){
+
+    const productCart = document.createElement("li");
+    productCart.className = "product";
+    productCart.innerHTML =
+    `
+    <img src="${product.images[0]}" class="product_image">
+    <h2 class="product_name">${product.nameValue}</h2>
+    <h3 class="product_price">${product.price}.00$</h3>
+    <button class="product_delete">X</button>
+    `;
+
+    cartArea.appendChild(productCart);
+
+    productCart.addEventListener("click", ev =>{
+
+        if(ev.target.tagName === "BUTTON"){
+
+            console.log("removed");
+            removeIt(product.id);
+        }
 
     });
 
-    productArr = firebaseProducts;
-
 }
 
-function renderCartItems(item){
-
-    const cartItem = document.createElement("div");
-    cartItem.className = "cart-item";
-
-    const cartInfoItem = document.createElement("div");
-    cartInfoItem.className = "cart-info";
-
-    const placeholder = item.images ? item.images[0] : "https://www.unfe.org/wp-content/uploads/2019/04/SM-placeholder-1024x512.png";
-
-    const cartHasProducts = shoppingCart.some((productCart) =>{
-
-        productCart.id === item.id;
-
-    });
-
-    cartInfoItem.innerHTML = `
-
-    <h2 class="product_name" id="product_name">${item.nameValue}</h2>
-    <h2 class="product_price" id="product_price">${item.price}.00$</h2>
-
-    `;
-
-    cartItem.innerHTML = `
-    
-    <img src="${placeholder}" class="product_image guitarPhoto" id="product_image>
-
-    `;
-
-    cartItem.appendChild(cartInfoItem);
-    itemsArea.appendChild(cartItem);
-
-}
-
-function getCart(){
-    
-    const localCart = localStorage.getItem("cart");
-    return localCart ? JSON.parse(localCart) : [];
-}
-
-onAuthStateChanged(auth, async (user) =>{
-
-    console.log(user);
-
-    if(user){
-        userHasLoggedIn = user;
-        shoppingCart = await getFirebaseCart(db, userHasLoggedIn.uid);
-        
+onAuthStateChanged(auth, async (user) => {
+    if (user) {
+      // User is signed in, see docs for a list of available properties
+      // https://firebase.google.com/docs/reference/js/firebase.User
+      userHasLoggedIn = user;
+      shoppingCart = await getFirebaseCart(db, userHasLoggedIn.uid);
+    } else {
+        shoppingCart = getMyLocalCart();
+      // User is signed out
+      // ...
     }
 
-    else{
-        shoppingCart = getCart();
-    }
-});
+    loadCart(shoppingCart);
 
-addItemBtn.addEventListener("click", (ev) =>{
-
-    validate(db, auth);
-
-});
-
-getItems();
+  });

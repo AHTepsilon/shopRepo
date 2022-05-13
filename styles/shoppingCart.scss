@@ -69,14 +69,18 @@ section{
                 font-size: 32px;
                 width: 140px;
                 font-weight: lighter;
-
+                font-family: 'Bebas Neue', cursive;
             }
 
             .product_name{
 
                 line-height: 20px; 
                 width: 220px;
-                font-size: 18px;
+                font-size: 48px;
+            }
+
+            .product_delete{
+
             }
             
         }
@@ -121,6 +125,33 @@ section{
         }
 
     }
+}
+
+                    
+.product_price{
+
+    font-size: 32px;
+    width: 140px;
+    font-weight: lighter;
+    font-family: 'Bebas Neue', cursive;
+}
+
+.product_name{
+
+    line-height: 40px; 
+    width: 100%;
+    font-size: 48px;
+}
+
+.product_delete{
+
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    background-color: $blackCol;
+    color: $yellowCol;
+    border: none;
+    
 }
 
 footer{
