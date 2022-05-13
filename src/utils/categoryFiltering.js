@@ -1,4 +1,5 @@
 import { getFirestore } from "firebase/firestore";
+import _, { map } from 'underscore';
 
 import {displayItems, itemsArea } from "../itemShowcase";
 const filterForm = document.getElementById("category_changer");
@@ -100,11 +101,11 @@ function filterIt(itemsArea, productArr){
             });
 
             if(sortSelectValue == "AlphabA"){
-                filterProducts = filterProducts.nameValue.sort();
+                filterProducts = _.sortBy(filterProducts, "nameValue");
             }
 
             if(sortSelectValue == "AlphabZ"){
-                filterProducts = filterProducts.nameValue.sort().reverse();
+                filterProducts = _.sortBy(filterProducts, "nameValue").reverse();
             }
 
             if(sortSelectValue == "PriceH"){
@@ -116,11 +117,11 @@ function filterIt(itemsArea, productArr){
             }
 
             if(sortSelectValue == "Manufacturer"){
-                filterProducts = filterProducts.sort((a) => a.manufacturer);
+                filterProducts = _.sortBy(filterProducts, "manufacturer");
             }
 
             if(sortSelectValue == "Body"){
-                filterProducts = filterProducts.sort((a) => a.body);
+                filterProducts = _.sortBy(filterProducts, "body");
             }
 
 
