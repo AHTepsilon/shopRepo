@@ -2,15 +2,18 @@ import { getFirestore } from "firebase/firestore";
 
 import {displayItems, itemsArea } from "../itemShowcase";
 const filterForm = document.getElementById("category_changer");
+const sortIt = document.getElementById("sort_div");
 
 const filterFormInstrument = document.getElementById("instrument-querier");
 const filterFormManufacturer = document.getElementById("manufacturer-querier");
 const filterFormBody = document.getElementById("body-querier");
 const filterFormColor = document.getElementById("color-querier");
 
+const sortSelect = document.getElementById("sorter");
+
 let filterProductsInstMan = [];
 let filterProductsBodCol = [];
-let filterProducts;
+let filterProducts = [];
 
 function filterIt(itemsArea, productArr){
 
@@ -22,6 +25,7 @@ function filterIt(itemsArea, productArr){
         const newCatManufacturer = filterFormManufacturer.value;
         const newCatBody = filterFormBody.value;
         const newCatColor = filterFormColor.value;
+        const sortSelectValue = sortSelect.value;
 
         let instrumentArr = [];
         let manufacturerArr = [];
@@ -89,7 +93,38 @@ function filterIt(itemsArea, productArr){
 
             filterProducts = filterProductsInstMan.filter(v => filterProductsBodCol.includes(v));
 
-            console.log(filterProducts);
+            filterProducts.forEach(item =>{
+
+                console.log(item.nameValue);
+
+            });
+
+            if(sortSelectValue == "AlphabA"){
+                filterProducts = filterProducts.nameValue.sort();
+            }
+
+            if(sortSelectValue == "AlphabZ"){
+                filterProducts = filterProducts.nameValue.sort().reverse();
+            }
+
+            if(sortSelectValue == "PriceH"){
+                filterProducts = filterProducts.sort((a, b) => b.price - a.price);
+            }
+
+            if(sortSelectValue == "PriceL"){
+                filterProducts = filterProducts.sort((a, b) => a.price - b.price);
+            }
+
+            if(sortSelectValue == "Manufacturer"){
+                filterProducts = filterProducts.sort((a) => a.manufacturer);
+            }
+
+            if(sortSelectValue == "Body"){
+                filterProducts = filterProducts.sort((a) => a.body);
+            }
+
+
+            //console.log(filterProducts);
                 
             filterProducts.forEach((item) => {
     

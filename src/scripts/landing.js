@@ -5,7 +5,7 @@ import { fetchItems } from "../utils/item";
 import { getItems, displayItems, getCart } from "../itemShowcase";
 import { getFirebaseCart } from "../utils/cartFunction";
 import { validate } from "../specs/addProductsValidation";
-import { filterIt } from "../utils/categoryFiltering";
+import { filterIt} from "../utils/categoryFiltering";
 
 const db = getFirestore(app);
 const auth = getAuth();
