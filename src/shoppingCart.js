@@ -87,3 +87,8 @@ onAuthStateChanged(auth, async (user) => {
     loadCart(shoppingCart);
 
   });
+
+export{
+
+    shoppingCart
+}
