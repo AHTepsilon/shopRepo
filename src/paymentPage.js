@@ -5,7 +5,7 @@ import {firebaseConfig, firebase} from "./firebase_app";
 import {app} from "./firebase_app";
 import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
-import { doc, setDoc } from "firebase/firestore";
+import { doc, setDoc, deleteDoc } from "firebase/firestore";
 import {getProduct} from "./utils/getProduct";
 import { validate } from "./specs/addProductsValidation";
 import { getFirebaseCart,  createFirebaseCart} from "./utils/cartFunction";
@@ -85,6 +85,10 @@ proceedBtn.addEventListener("click", ev=>{
             receipt.text("\n" + "Buyer's name: " + fName + "\n" + "Buyer's last name: " + lName + "\n" + "Email: " + mail + "\n" + "Shipping Address: " + add + "\n" + "Phone Number: " + pNumb + "\n" + "Zip Code: " + zip + "\n" + "\n" + "Total Payed: " + totalToPay + ".00$" + "\n" + "Delivery ID: " + userId, 1, 1);
 
             receipt.save("Receipt.pdf");
+
+            if(userHasLoggedIn){
+                deleteDoc(doc(db, "cart", userHasLoggedIn.uid));
+            }
         }
 
 });
