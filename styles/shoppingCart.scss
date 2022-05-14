@@ -120,7 +120,17 @@ section{
             padding-left: 10px;
             padding-right: 10px;
 
+            border: none;
             border-radius: 10px;
+            
+            &:hover{
+        
+                background-color: $whiteCol;
+                color: $blackCol;
+        
+                cursor: pointer;
+        
+            }
 
         }
 
@@ -151,6 +161,15 @@ section{
     background-color: $blackCol;
     color: $yellowCol;
     border: none;
+
+    &:hover{
+        
+        background-color: $whiteCol;
+        color: $blackCol;
+
+        cursor: pointer;
+
+    }
     
 }
 

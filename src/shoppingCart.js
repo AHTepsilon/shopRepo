@@ -8,6 +8,9 @@ import { initializeApp } from "firebase/app";
 
 const cartArea= document.getElementById("item_list");
 const totalArea = document.getElementById("final_price");
+
+const proceedButton = document.getElementById("checkout_button_a");
+
 let shoppingCart = [];
 
 const db = getFirestore(app);
@@ -72,6 +75,21 @@ function displayIt(product){
 
 }
 
+proceedButton.addEventListener("click", ev =>{
+
+    if(shoppingCart.length > 0){
+
+        window.location.href = "./paymentPage.html";
+
+    }
+    else{
+        
+        alert("Could not find products in shopping cart");
+
+    }  
+
+});
+
 onAuthStateChanged(auth, async (user) => {
     if (user) {
       // User is signed in, see docs for a list of available properties
@@ -79,7 +97,10 @@ onAuthStateChanged(auth, async (user) => {
       userHasLoggedIn = user;
       shoppingCart = await getFirebaseCart(db, userHasLoggedIn.uid);
     } else {
-        shoppingCart = getMyLocalCart();
+        shoppingCart = getCart();
+        alert("Please log in before proceeding to cart");
+
+        window.location.href = "./login.html";
       // User is signed out
       // ...
     }

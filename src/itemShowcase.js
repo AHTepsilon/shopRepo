@@ -108,7 +108,7 @@ onAuthStateChanged(auth, async (user) => {
       cart = await getFirebaseCart(db, userHasLoggedIn.uid);
       // ...
     } else {
-        cart = getMyLocalCart();
+        cart = getCart();
       // User is signed out
       // ...
     }
