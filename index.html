@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BOMBHEAD | Quality guitars at the best price</title>
-    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles/index.scss">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
@@ -32,12 +32,13 @@
                             <li class="block_list_element"><a href="" class="list_element">Accesories</a></li>
                         </ul>
                     </li>
-                    <li class="navbar__deals__label catDeals_item">NEW DEALS 
+                    <li class="navbar__deals__label catDeals_item"><a href="./itemShop.html">NEW DEALS</a>
                         <ul class="navbar__catDeals__newDeals">
                             <li><a href="" class="list_element">Daily Offers</a></li>
                             <li><a href="" class="list_element">Seasonal Offers</a></li>
                         </ul>
                     </li>
+                    <li class="navbar__addItem__label catDeals_item"> <button id="navbar__addItem__a">ADD PRODUCT</button></li>
                 </ul>
             </div>
 
@@ -45,12 +46,13 @@
                 <ul class="navbar__icons">
                     <li><a href="./shoppingCart.html"><button id="navbar__icons_button" class="navbar__icons_button" id="shopping_cart_button"><img src="img/icons/shopping_cart.png"></button></a></li>
                     <li><button class="navbar__icons_button" id="notif_button"><img src="img/icons/notification/notif_icon.png"></button></li>
-                    <li><button class="navbar__icons_button" id="user_button"><img src="img/icons/user/user_icon.png"></button></li>
+                    <li class="navbar_user_item"><button class="navbar__icons_button" id="user_button"><img src="img/icons/user/user_icon.png"></a>
+                    </li>
                 </ul>
             </div>
             
             <div class="burger_menu_div">
-                <li><button class="navbar__icons_button" id="menu_button"><img src="img/icons/menu.png" class="menu_icon"></button></li>
+                <li><button class="navbar__icons_button" id="menu_button"><a href="./menuItems.html"><img src="img/icons/menu.png" class="menu_icon"></a></button></li>
             </div>
         </nav>
     </header>
@@ -93,55 +95,15 @@
     </section>
 
     <section class="section__new_deals section__padding"> <!--New deals section-->
-        <h2 id="section__new_deals_title">New Deals</h2>
+        <h2 id="section__new_deals_title"></h2>
 
         <div class="section__new_deals_content">
-            <div class="section__new_deals_left_arrow">
-                <img src="./img/icons/arrows/left_chevron_yellow.png" alt="" class="left_chevron_yellow_img">
-            </div>
             <div class="section__new_deals_div">
-                <a href = " ">
-                    <div class="section__new_deals_div_product_showcase">
-                        <div class="product_1 product">
-                            <div class="section__new_deals_div_product_showcase_text">
-                                <h2 class="product_price_1">$299.99</h3>
-                                <p class="product_name_1">Gibson Junior Les Paul Solid Color</p>
-                            </div>
-                            <img src="img/products/lespaul1.png" alt="" class="guitarPhoto">
-                        </div>
-                        <div class="product_2 product">
-                            <div class="section__new_deals_div_product_showcase_text">
-                                <h2 class="product_price_2">$399.99</h3>
-                                <p class="product_name_2">Epiphone Les Paul - White or Black</p>
-                            </div>
-                            <img src="img/products/lespaul2.png" alt="" class="guitarPhoto">
-                        </div>
-                        <div class="product_3 product">
-                            <div class="section__new_deals_div_product_showcase_text">
-                                <h2 class="product_price_3">$159.99</h3>
-                                <p class="product_name_3">Epiphone Les Paul Special Satin E1 - Black</p>
-                            </div>
-                            <img src="img/products/lespaul3.png" alt="" class="guitarPhoto">
-                        </div>
-                        <div class="product_4 product">
-                            <div class="section__new_deals_div_product_showcase_text">
-                                <h2 class="product_price_4">$159.99</h3>
-                                <p class="product_name_4">Squier Affinity Telecaster - Sunburst</p>
-                            </div>
-                            <img src="img/products/telecaster1.png" alt="" class="guitarPhoto">
-                        </div>
-                        <div class="product_5 product">
-                            <div class="section__new_deals_div_product_showcase_text">
-                                <h2 class="product_price_5">$199.99</h3>
-                                <p class="product_name_5">Ibanez AX120 - Solid Colors with Maple</p>
-                            </div>
-                            <img src="img/products/AX120.png" alt="" class="guitarPhoto">
-                        </div>
+                <div>
+                    <div class="section__new_deals_div_product_showcase" id="section__new_deals_div_product_showcase">
+                        <div class="loader"></div>
                     </div>
-                </a>
-            </div>
-            <div class="section__new_deals_right_arrow">
-                <img src="./img/icons/arrows/right_chevron_yellow.png" alt="" class="right_chevron_yellow_img">
+                </div>
             </div>
         </div>
 
@@ -180,13 +142,12 @@
                         <option value="">Telecaster</option>
                         <option value="">Offset</option>
                         <option value="">SG</option>
-                        <option value="">Others (Guitars)</option>
                         <option value="">Doublecut</option>
                         <option value="">Jazz</option>
                         <option value="">Precision Bass</option>
                         <option value="">Offset</option>
                         <option value="">SR</option>
-                        <option value="">Others (Basses)</option>
+                        <option value="">Others</option>
                     </select>
                 </div>
 
@@ -211,9 +172,7 @@
                         <option value="">Orange</option>
                         <option value="">Pink</option>
                         <option value="">Cream</option>
-                        <option value="">Multiple Colors</option>
                         <option value="">Sunburst</option>
-                        <option value="">Others</option>
                     </select>
                 </div>
                 <div>
@@ -281,8 +240,6 @@
         </section>
     </footer>
 
-    <script src="./src/index.js">
-
-    </script>
-</body>
+    <script src="./src/scripts/landing.js" type="module"></script>
+    </body>
 </html>

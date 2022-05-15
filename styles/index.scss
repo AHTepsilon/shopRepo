@@ -94,11 +94,15 @@ p{
     position: relative;
     width: 100%;
     height: 600px;
+    overflow: auto;
+    margin-left: auto;
 
     &_content{
         display: flex;  
         flex-direction: row;
         align-items: center;
+        margin-left: auto;
+        margin-right: auto;
 
         .left_chevron_yellow_img{
             margin-right: 20px;
@@ -125,12 +129,20 @@ p{
         flex-direction: row;
         margin-top: 30px;
 
+        &:hover{
+
+            cursor: grab;
+
+        }
+
         .product{
             margin: 0 3em;
             transition: transform .2s;
+            display: block;
 
             &:hover{
                 transform: scale(1.2);
+                cursor: pointer;
 
                 >.section__new_deals_div_product_showcase_text{
                     display: block;
@@ -147,74 +159,46 @@ p{
             text-align: left;
             text-decoration: none;
             color: $yellowCol;
-            top: 270px;
+            top: 310px;
         }
 
         .product_price{
 
-            @mixin productPricesYeah {
-                font-size: 32px;
-                width: 140px;
-                font-weight: lighter;
-            }
+            font-size: 32px;
+            width: 140px;
+            font-weight: lighter;
 
-            &_1{
-                @include productPricesYeah();
-            }
-
-            &_2{
-                @include productPricesYeah();
-            }
-
-            &_3{
-                @include productPricesYeah();
-            }
-
-            &_4{
-                @include productPricesYeah();
-            }
-
-            &_5{
-                @include productPricesYeah();
-            }
         }
 
         .product_name{
 
-            @mixin productNamesYeah {
-                line-height: 20px;
-                width: 220px;
-                font-size: 12px;
-            }
-
-            &_1{
-                @include productNamesYeah();
-            }
-
-            &_2{
-                @include productNamesYeah();
-            }
-
-            &_3{
-                @include productNamesYeah();
-            }
-
-            &_4{
-                @include productNamesYeah();
-            }
-
-            &_5{
-                @include productNamesYeah();
-            }
+            line-height: 20px;
+            width: 220px;
+            font-size: 18px;
         }
     }
 
     .guitarPhoto{
-        width: 100%;
-        height: 100%;
+        width: 200px;
+        height: 400px;
         background: linear-gradient(0deg, #000000 0%, rgba(0, 0, 0, 0) 67.98%),
     }
 }
+
+.loader {
+    border: 16px solid $yellowCol; /* Light grey */
+    border-top: 16px solid $blackCol; /* Blue */
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+    @include keepInCenter();
+  }
+    
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
 
 .section__search_by_category_logos_group{
     display: flex;
@@ -510,6 +494,11 @@ nav{
     display: flex;
     align-items: center;
     flex-wrap: wrap;
+
+    a{
+        text-decoration: none !important;
+        color: $yellowCol;
+    }
     
 
     .navbar_search_div{
@@ -573,28 +562,58 @@ nav{
         @include dropdownList();
     }
 
-    .navbar__deals__label{
-        font-size: 1em;
-        margin: 0 2em;
-        color: $yellowCol;
+    .navbar__addItems__label{
+
         &:hover{
 
-            cursor: pointer;
             text-decoration: underline;
 
-            > .navbar__catDeals__newDeals{
-                display: block;
-                background-color: $yellowCol;
-                border-radius: 10px;
-            }
-
         }
+
+    }
+
+    .navbar__deals__label{
+            font-size: 1em;
+            margin: 0 2em;
+            color: $yellowCol;
+            &:hover{
+
+                cursor: pointer;
+                text-decoration: underline;
+
+                > .navbar__catDeals__newDeals{
+                    display: block;
+                    background-color: $yellowCol;
+                    border-radius: 10px;
+                }
+
+            }
     }
     .navbar_icons_div{
         .navbar__icons{
             @include inlineBlock();
             list-style: none;
             transition: transform .2s;
+
+            .navbar_user_item{
+
+                font-size: 1em;
+                margin: 0 2em;
+                color: $yellowCol;
+                &:hover{
+    
+                    cursor: pointer;
+                    text-decoration: underline;
+    
+                    > .navbar_user_item_list{
+                        display: block;
+                        background-color: $yellowCol;
+                        border-radius: 10px;
+                    }
+    
+                }
+
+            }
 
             &_button{
                 background: none;

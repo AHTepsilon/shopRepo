@@ -1,0 +1,64 @@
+$yellowCol: #FFE70C;
+$blackCol: #000000;
+$whiteCol: #FFFFFF;
+$lightGrayCol: #F1F1F1;
+$darkGrayCol: #6C6C6C;
+
+@mixin inlineBlock{
+    display: flex;
+    flex-direction: row;
+}
+
+@mixin keepInCenter{
+    margin: auto;
+    justify-content: center;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+}
+
+@mixin dropdownExpand{
+
+    display: none;
+
+    &:hover{
+        display: block;
+    }
+}
+
+
+h1{
+    font-family: 'Bebas Neue', cursive;
+    font-size: 3em;
+}
+
+h3{
+    font-family: 'Bebas Neue', cursive;
+    font-size: 2em;
+}
+
+p{
+    font-family: 'Baloo Tammudu 2', cursive;
+}
+
+
+.product{
+    display: flex;
+    align-items: center;
+
+    margin: 100px;
+
+    .product_image{
+
+        object-fit: contain;
+        width: 250px;   
+    
+    }
+
+    .product_name{
+
+
+    }
+}
+
+

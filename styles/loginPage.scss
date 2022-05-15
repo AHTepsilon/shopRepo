@@ -1,0 +1,83 @@
+$yellowCol: #FFE70C;
+$blackCol: #000000;
+$whiteCol: #FFFFFF;
+$lightGrayCol: #F1F1F1;
+$darkGrayCol: #6C6C6C;
+
+@mixin inlineBlock{
+    display: flex;
+    flex-direction: row;
+}
+
+@mixin keepInCenter{
+    margin: auto;
+    justify-content: center;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+}
+
+@mixin dropdownExpand{
+
+    display: none;
+
+    &:hover{
+        display: block;
+    }
+}
+
+section{
+    @include keepInCenter();
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 10%;
+    
+    a{
+        margin-top: 60px;
+    }
+
+    h2{
+        margin-bottom: 50px;
+    }
+
+    .form_login{
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        input{
+            border-width: 1px;
+            border-color: #000000;
+            border-radius: 10px;
+            height: 25px;
+            width: 250px;
+            margin-top: 2px;
+            margin-bottom: 15px;
+            font-family: 'Baloo Tammudu 2', cursive;
+        }
+
+        
+        .submit_button{
+            margin: 20px;
+            width: 100px;
+            background-color: $blackCol;
+            color: $yellowCol;
+            border: none;
+            border-radius: 10px;
+            height: 25px;
+            margin: 15px;
+            font-family: 'Baloo Tammudu 2', cursive;
+
+            &:hover{
+                cursor: pointer;
+                background-color: $whiteCol;
+                color: $blackCol;
+            }
+        }
+
+    }
+
+}

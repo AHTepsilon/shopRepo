@@ -6,13 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BOMBHEAD | Quality guitars at the best price</title>
     <link rel="stylesheet" href="./styles/_globals.scss">
-    <link rel="stylesheet" href="styles/shoppingCart.scss">
+    <link rel="stylesheet" href="styles/paymentPage.scss">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/mediaqueries.css">
 </head>
+
 <body>
     <header> <!--Header / navigation bar-->
         <nav>
@@ -21,7 +22,7 @@
                     <img src="img/logos/Logo.png" class="bombhead__logo">
                 </a>
             </div>
-
+    
             <div class="catDeals__div">
                 <ul class="navbar__catDeals catDeals_item">
                     <li class="navbar__cat__label">CATEGORIES
@@ -42,7 +43,7 @@
                     <li class="navbar__addItem__label catDeals_item"> <button id="navbar__addItem__a">ADD PRODUCT</button></li>
                 </ul>
             </div>
-
+    
             <div class="navbar_icons_div">
                 <ul class="navbar__icons">
                     <li><a href="./shoppingCart.html"><button id="navbar__icons_button" class="navbar__icons_button" id="shopping_cart_button"><img src="img/icons/shopping_cart.png"></button></a></li>
@@ -55,72 +56,55 @@
                 <li><button class="navbar__icons_button" id="menu_button"><a href="./menuItems.html"><img src="img/icons/menu.png" class="menu_icon"></a></button></li>            </div>
         </nav>
     </header>
-
+    
     <div class="spTitle">
-        <h2>SHOPPING CART</h2>
+        <h2>CHECKOUT</h2>
     </div>
-
-    <section class="shoppingCartSection">
-        <div id="navi_section" class="navi_section">
-
-            <div id="navi_section_shopping_cart" class="navi_section_shopping_cart navi_section_item">
-                <a href=""><p>SHOPPING CART</p></a>
-            </div>
-
-            <div id="navi_section_saved_items" class="navi_section_saved_items navi_section_item">
-                <a href=""><p>SAVED ITEMS</p></a>
-            </div>
-
-            <div id="navi_section_wishlist" class="navi_section_wishlist navi_section_item">
-               <a href=""><p>WISHLIST</p></a>
-            </div>
-
+    
+    <section class="checkout_section">
+    
+        <div class="billing_info_div">
+            <h2>BILLING INFO</h2>
+            <form class="billing_info_div_form" id="billing_info_div_form" action="">
+                <p>First Name</p> <input type="text" class="billing_info_div_form_input" name="firstName">
+                <p>Last Name</p> <input type="text" class="billing_info_div_form_input" name="lastName">
+                <p>Email</p> <input type="email" class="billing_info_div_form_input" name="email">
+                <p>Address</p> <input type="text" class="billing_info_div_form_input" name="address">
+                <p>Phone Number</p> <input type="number" class="billing_info_div_form_input" name="phoneNumber">
+                <p>ZIP Code</p> <input type="text" class="billing_info_div_form_input" name="zipCode">
+            </form>
         </div>
-        <div id="item_list" class="item_list">
+    
+        <div class="payment_info_div">
+            <h2>PAYMENT INFO</h2>
+    
+            <div class="payment_info_div_credit_card">
+        
+                <form action="" id="payment_info_div_credit_card_form" class="payment_info_div_credit_card_form">
+    
+                    Credit Card Number <input type="number" class="credit_item" name="ccNumber">
+                    Name on Card <input type="text" class="credit_item" name="nameCard">
+    
+                    <div class="payment_info_div_credit_card_form_lower_part">
+                        
+                    Expiry Date <input type="datetime" class="credit_item_lower" name="expDate">
+                    CCV <input type="number" class="credit_item_lower" name="ccv">
+    
+                    </div>
+                </form>
+    
+            </div>
+    
+            <div class="proceed_to_confirmation">
+    
+                <button class="next_confirm_button" id="next_confirm_button">Finish Payment</button>
+    
+            </div>
             
         </div>
-        <div id="total_price_div" class="total_price_div">
-
-            <h2>TOTAL</h2>
-            <h2 id="final_price" class="final_price">0.00</h2>
-
-        </div>
-        <div id="checkout_button" class="checkout_button">
-
-            <button class="checkout_button_a" id="checkout_button_a">PROCEED TO CHECKOUT ></button>
-
-        </div>
+    
     </section>
 
-    <footer> <!--Last two sections / Footer area-->
-        <section class="footer_section_1">
-            <p id="footer_section_1_text_left">
-                <a href="" class="footerHL">About Us</a> <br>
-                <a href="" class="footerHL">Sales</a> <br>
-                <a href="" class="footerHL">Environment and Social</a> <br>
-                <a href="" class="footerHL">FAQ</a> <br>
-                <a href="" class="footerHL">Why Choose BOMBHEAD</a> <br>
-            </p>
-
-            <p id="footer_section_1_text_right">
-                <a href="" class="footerHL">Free Shipping Policy</a> <br>
-                <a href="" class="footerHL">Orders</a> <br>
-                <a href="" class="footerHL">Return Policy</a> <br>
-                <a href="" class="footerHL">Sales Policy</a> <br>
-                <a href="" class="footerHL">Contact Us</a> <br>
-            </p>
-        </section>
-        <section class="footer_section_2">
-            <div class="footer_section_2_icons_div">
-                <a href="" class="social_media_hyperlink"><img src="img/icons/social_media/facebook.png" alt="facebook logo"></a>
-                <a href="" class="social_media_hyperlink"><img src="img/icons/social_media/twitter.png" alt="twitter logo"></a>
-                <a href="" class="social_media_hyperlink"><img src="img/icons/social_media/youtube.png" alt="youtube logo"></a>
-                <a href="" class="social_media_hyperlink"><img src="img/icons/social_media/instagram.png" alt="instagram logo"></a>
-            </div>
-            <p class="footer_section_2_text">2022 BOMBHEAD - All rights reserved</p>
-        </section>
-    </footer>
-
-    <script src="./src/shoppingCart.js" type="module"></script>
+    <script src="./src/paymentPage.js" type="module"></script>
 </body>
-</html>
+

@@ -1,0 +1,206 @@
+$yellowCol: #FFE70C;
+$blackCol: #000000;
+$whiteCol: #FFFFFF;
+$lightGrayCol: #F1F1F1;
+$darkGrayCol: #6C6C6C;
+
+@mixin inlineBlock{
+    display: flex;
+    flex-direction: row;
+}
+
+@mixin keepInCenter{
+    margin: auto;
+    justify-content: center;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+}
+
+@mixin dropdownExpand{
+
+    display: none;
+
+    &:hover{
+        display: block;
+    }
+}
+
+section{
+
+    .category_changer{
+
+        .sort_div{
+
+            margin: 20px;
+            display: flex;
+            flex-direction: row;
+
+            select{
+
+                margin: 20px;
+
+            }
+
+        }
+
+        &_form{
+
+            display: flex;
+            flex-direction: row;
+
+            align-items: center;
+
+            &_div{
+
+                display: flex;
+                flex-direction: row;
+                margin: 20px;
+                
+                align-items: center;    
+
+                select{
+                    margin: 10px;
+                }
+
+            }
+
+            .submit_button{
+                background-color: $blackCol;
+                color: $yellowCol;
+                border-radius: 10px;
+                border: none;
+                height: 30px;
+                width: 70px;
+
+                &:hover{
+                    cursor: pointer;
+                    background-color: $blackCol;
+                    color: $whiteCol;
+                }
+            }
+    
+        }
+
+    }
+
+}
+
+.section__new_deals_div_product_showcase{
+
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        margin-top: 60px;
+        margin-bottom: 5%;
+        margin-left: 8%;
+        margin-right: 8%;
+        flex-wrap: wrap;
+                    
+        &:hover{
+            background-color: $yellowCol;
+        }
+
+        .product{
+            margin: 0 3em;
+            transition: transform .2s;
+            display: block;
+
+            &:hover{
+                transform: scale(1.2);
+                cursor: pointer;
+
+                >.section__new_deals_div_product_showcase_text_itemshop{
+                    display: block;
+                }
+            }
+        }
+        
+        .section__new_deals_div_product_showcase_text_itemshop{
+            text-align: left;
+            color: #000;
+            margin-left: 10px;
+            text-decoration: none;
+            display: none;
+            position: absolute;
+            top: 290px;
+            background-color: $yellowCol;
+            /* bottom: 10px; */
+            left: 195px;
+            border-radius: 10px;
+            border: 1px solid $blackCol;
+        }
+
+        .product_price{
+
+            font-size: 32px;
+            width: 140px;
+            font-weight: lighter;
+
+        }
+
+        .product_name{
+
+            line-height: 20px;
+            width: 220px;
+            font-size: 18px;
+        }
+}
+
+.guitarPhoto{
+    width: 200px;
+    height: 400px;
+}
+
+.loader {
+    border: 16px solid $yellowCol; /* Light grey */
+    border-top: 16px solid $blackCol; /* Blue */
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+    @include keepInCenter();
+  }
+    
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+  footer{
+    .footer_section_1{
+        background-color: $lightGrayCol;
+        @include keepInCenter();
+        flex-direction: row;
+    }
+
+    .footerHL{
+        color: $blackCol;
+        text-decoration: none;
+    }
+    
+    #footer_section_1_text_left{
+        text-align: center;
+        margin: 50px;
+        line-height: 30px;
+        color: $blackCol;
+    }
+    
+    #footer_section_1_text_right{
+        text-align: center;
+        margin: 50px;
+        line-height: 30px;
+        color: $blackCol;
+    }
+    
+    .footer_section_2{
+        background-color: $darkGrayCol;
+        @include keepInCenter();
+        color: $whiteCol;
+        padding-top: 20px;
+
+        .social_media_hyperlink{
+            margin: 6px;
+        }
+    }
+}

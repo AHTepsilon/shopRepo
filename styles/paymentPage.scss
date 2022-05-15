@@ -1,0 +1,141 @@
+$yellowCol: #FFE70C;
+$blackCol: #000000;
+$whiteCol: #FFFFFF;
+$lightGrayCol: #F1F1F1;
+$darkGrayCol: #6C6C6C;
+
+@mixin inlineBlock{
+    display: flex;
+    flex-direction: row;
+}
+
+@mixin keepInCenter{
+    margin: auto;
+    justify-content: center;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+}
+
+@mixin dropdownExpand{
+
+    display: none;
+
+    &:hover{
+        display: block;
+    }
+}
+
+section{
+
+    display: flex;
+    flex-direction: row;
+    
+    .billing_info_div{
+
+        margin: 100px 120px;
+
+        &_form{
+            
+            display: flex;
+            flex-direction: column;
+            margin-top: 30px;
+            font-family: 'Baloo Tammudu 2', cursive;
+
+            &_input{
+                margin-left: 40px;
+                width: 300px;
+                font-family: 'Baloo Tammudu 2', cursive;
+            }
+        }
+
+    }
+
+    .payment_info_div{
+
+        display: flex;
+        flex-direction: column;
+
+        margin: 100px 120px;
+        width: 100%;
+
+        &_credit_card{
+
+            background-color: $whiteCol;
+            padding: 40px;
+            border-radius: 20px;
+
+            &_form{
+
+                display: flex;
+                flex-direction: column;
+                font-family: 'Baloo Tammudu 2', cursive;
+
+                margin-left: 40px;
+
+                .credit_checkb{
+
+                    margin-bottom: 20px;
+                    top: 20px;
+                    position: static;
+                    width: 20px;
+
+                }
+
+                .credit_item{
+                    width: 200px;
+                    margin: 10px;
+
+                    &_lower{
+                        width: 100px;
+                        height: 20px;
+                        margin: 10px;
+                        font-family: 'Baloo Tammudu 2', cursive;
+                    }
+                }
+
+                &_lower_part{
+
+                    margin: 10px;
+                    display: flex;
+                    flex-direction: row;
+                    font-family: 'Baloo Tammudu 2', cursive;
+                }
+
+            }
+
+        }
+
+        .proceed_to_confirmation{
+
+            margin-top: 50px;
+
+            .next_confirm_button{
+
+                width: 200px;
+                height: 30px;
+
+                background-color: $blackCol;
+                color: $yellowCol;
+
+                font-family: 'Baloo Tammudu 2', cursive;
+
+                border-radius: 10px;
+                border: none;
+
+                &:hover{
+
+                    cursor: pointer;
+
+                    background-color: $whiteCol;
+                    color: $blackCol;
+
+                }
+
+            }
+
+        }
+
+    }
+
+}

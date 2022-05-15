@@ -4,12 +4,6 @@ $whiteCol: #FFFFFF;
 $lightGrayCol: #F1F1F1;
 $darkGrayCol: #6C6C6C;
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 @mixin inlineBlock{
     display: flex;
     flex-direction: row;
@@ -32,179 +26,10 @@ $darkGrayCol: #6C6C6C;
     }
 }
 
-body{
-    background-color: $yellowCol;
-
-    .spTitle{
-        @include keepInCenter();
-        margin-top: 50px;
-    }
-}
-
-h2{
-    font-family: 'Bebas Neue', cursive;
-    font-size: 2em;
-}
-
-p{
-    font-family: 'Baloo Tammudu 2', cursive;
-}
-
-header{
-    background-color: $blackCol;
-    width: 100%;
-    padding: 20px;
-    height: 100px;
-    align-items: center;
-    justify-content: center;
-
-    .navbar_logo_div{
-        &:hover{
-            cursor: pointer;
-        }
-    }
-}
-
-nav{
-    @include inlineBlock();
-    font-family: 'Baloo Tammudu 2', cursive;
-    justify-content: space-between;
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    
-
-    .navbar_search_div{
-        display: flex;
-        font-family: 'Baloo Tammudu 2', cursive;
-        background-color: $whiteCol;
-        padding: 5px;
-    }
-
-    .navbar__catDeals{
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        list-style: none;
-    }
-
-    .navbar_search{
-        width: 25em;
-        height: 25px;
-        border: none;
-    }
-
-    .catDeals_item{
-        margin: 0 40px;
-    }
-
-    @mixin dropdownList{
-        display: none;
-        position: absolute;
-        padding: 10px 20px;
-        position: absolute;
-        z-index: 2;
-        list-style: none;
-    }
-    
-    .navbar__catDeals__categories{
-        @include dropdownList();
-    }
-
-    .navbar__cat__label{
-
-        color: $yellowCol;
-        font-size: 1em;
-        margin: 0 2em;
-
-        &:hover{
-
-            cursor: pointer;
-            text-decoration: underline;
-
-            > .navbar__catDeals__categories{
-                display: block;
-                background-color: $yellowCol;
-                border-radius: 10px;
-            }
-
-        }
-    }
-
-    .navbar__catDeals__newDeals{
-        @include dropdownList();
-    }
-
-    .navbar__deals__label{
-        font-size: 1em;
-        margin: 0 2em;
-        color: $yellowCol;
-        &:hover{
-
-            cursor: pointer;
-            text-decoration: underline;
-
-            > .navbar__catDeals__newDeals{
-                display: block;
-                background-color: $yellowCol;
-                border-radius: 10px;
-            }
-
-        }
-    }
-    .navbar_icons_div{
-        .navbar__icons{
-            @include inlineBlock();
-            list-style: none;
-            transition: transform .2s;
-
-            &_button{
-                background: none;
-                border: none;
-                margin: 0 10px;
-
-                &:hover{
-                    cursor: pointer;
-                    transform: scale(1.2);
-                }
-            }
-
-            #shopping_cart_button{
-                margin-top: 1px;
-                margin-right: 18px;
-            }
-        }
-    
-    }
-}
-
-.bombhead__logo{
-    position: static;
-    margin-right: 20px;
-    transition: transform .2s;
-
-    &:hover{
-        transform: scale(1.2);
-    }
-}
-
-.burger_menu_div{
-
-    display: none;
-    
-    .menu_icon{
-        width: 28px;
-    }
-
-    .navbar__icons_button{
-        background: none;
-        border: none;
-    }
-
-    list-style: none;
-}
-
 section{
+
+    display: flex;
+    flex-direction: column;
 
     .navi_section{
 
@@ -228,17 +53,161 @@ section{
         }
     }
 
+    .item_list{
+        margin: 10em;
+
+        display: flex;
+        flex-direction: column;
+
+        .cart_item{
+
+            display: flex;
+            flex-direction: row;
+                    
+            .product_price{
+
+                font-size: 32px;
+                width: 140px;
+                font-weight: lighter;
+                font-family: 'Bebas Neue', cursive;
+            }
+
+            .product_name{
+
+                line-height: 20px; 
+                width: 220px;
+                font-size: 48px;
+            }
+
+            .product_delete{
+
+            }
+            
+        }
+        .product_image{
+            width: 200px;
+            height: 400px;
+        }
+
+    }
+
     .total_price_div{
 
         display: flex;
         flex-direction: row;
-        position: absolute;
-        right: 20px;
-        margin-right: 20em;
+        margin-left: 10em;
 
         h2{
             margin: 15px;
         }
 
+    }
+
+    .checkout_button{
+
+        margin-top: 2em;
+        margin-left: 11em;
+        margin-bottom: 5em;
+
+        .checkout_button_a{
+
+            font-family: 'Baloo Tammudu 2', cursive;
+            background-color: $blackCol;
+            color: $yellowCol;
+            text-decoration: none;
+
+            padding-top: 8px;
+            padding-left: 10px;
+            padding-right: 10px;
+
+            border: none;
+            border-radius: 10px;
+            
+            &:hover{
+        
+                background-color: $whiteCol;
+                color: $blackCol;
+        
+                cursor: pointer;
+        
+            }
+
+        }
+
+    }
+}
+
+                    
+.product_price{
+
+    font-size: 32px;
+    width: 140px;
+    font-weight: lighter;
+    font-family: 'Bebas Neue', cursive;
+}
+
+.product_name{
+
+    line-height: 40px; 
+    width: 100%;
+    font-size: 48px;
+}
+
+.product_delete{
+
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    background-color: $blackCol;
+    color: $yellowCol;
+    border: none;
+
+    &:hover{
+        
+        background-color: $whiteCol;
+        color: $blackCol;
+
+        cursor: pointer;
+
+    }
+    
+}
+
+footer{
+
+    .footer_section_1{
+        background-color: $lightGrayCol;
+        @include keepInCenter();
+        flex-direction: row;
+    }
+
+    .footerHL{
+        color: $blackCol;
+        text-decoration: none;
+    }
+    
+    #footer_section_1_text_left{
+        text-align: center;
+        margin: 50px;
+        line-height: 30px;
+        color: $blackCol;
+    }
+    
+    #footer_section_1_text_right{
+        text-align: center;
+        margin: 50px;
+        line-height: 30px;
+        color: $blackCol;
+    }
+    
+    .footer_section_2{
+        background-color: $darkGrayCol;
+        @include keepInCenter();
+        color: $whiteCol;
+        padding-top: 20px;
+
+        .social_media_hyperlink{
+            margin: 6px;
+        }
     }
 }
