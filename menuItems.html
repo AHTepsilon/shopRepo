@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BOMBHEAD | Quality guitars at the best price</title>
     <link rel="stylesheet" href="./styles/_globals.scss">
-    <link rel="stylesheet" href="./styles/product.scss">
+    <link rel="stylesheet" href="./styles/menuItems.scss">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
@@ -44,32 +44,24 @@
             </div>
 
             <div class="navbar_icons_div">
-                <ul class="navbar__icons">
-                    <li><a href="./shoppingCart.html"><button id="navbar__icons_button" class="navbar__icons_button" id="shopping_cart_button"><img src="img/icons/shopping_cart.png"></button></a></li>
-                    <li><button class="navbar__icons_button" id="notif_button"><img src="img/icons/notification/notif_icon.png"></button></li>
-                    <li class="navbar_user_item"><button class="navbar__icons_button" id="user_button"><img src="img/icons/user/user_icon.png"></a>
-                    </ul>
             </div>
             
             <div class="burger_menu_div">
-                <li><button class="navbar__icons_button" id="menu_button"><a href="./menuItems.html"><img src="img/icons/menu.png" class="menu_icon"></a></button></li>            </div>
+                <li><button class="navbar__icons_button" id="menu_button"><a href="./menuItems.html"><img src="img/icons/menu.png" class="menu_icon"></a></button></li>
+            </div>
         </nav>
     </header>
 
-    <div class="items_area"></div>
-    
-    <section class="product">
-
-        <div class="product_assets" id="product_assets">
-
-        </div>
-
-        <div class="product_info" id="product_info">
-
-        </div>
-        
+    <section>
+        <ul class="menuItems_icons">
+            <li><a href="./shoppingCart.html"><button id="navbar__icons_button" class="menuItems_icons_button" id="shopping_cart_button"><img src="img/icons/shopping_cart.png"></button></a></li>
+            <li><button class="menuItems_icons_button" id="notif_button"><img src="img/icons/notification/notif_icon.png"></button></li>
+            <li class="navbar_user_item" id="user_button"><button class="menuItems_icons_button" id=""><img src="img/icons/user/user_icon.png"></li>
+            <li class="navbar__cat__label" style="text-align: center; font-family: 'Baloo Tammudu 2', cursive;">CATEGORIES</li>
+            <li class="navbar__deals__label catDeals_item" style="text-align: center; font-family: 'Baloo Tammudu 2', cursive;"><a href="itemShop.html">NEW DEALS</a></li>
+        </ul>
     </section>
 
-    <script src="./src/product.js" type="module"></script>
+    <script src="./src/menuItems.js" type="module"></script>
 </body>
 </html>

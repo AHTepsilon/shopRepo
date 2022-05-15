@@ -1,0 +1,87 @@
+$yellowCol: #FFE70C;
+$blackCol: #000000;
+$whiteCol: #FFFFFF;
+$lightGrayCol: #F1F1F1;
+$darkGrayCol: #6C6C6C;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@mixin inlineBlock{
+    display: flex;
+    flex-direction: row;
+}
+
+@mixin keepInCenter{
+    margin: auto;
+    justify-content: center;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+}
+
+@mixin dropdownExpand{
+
+    display: none;
+
+    &:hover{
+        display: block;
+    }
+}
+
+body{
+    background-color: $yellowCol;
+
+    .spTitle{
+        @include keepInCenter();
+        margin-top: 50px;
+    }
+}
+
+h2{
+    font-family: 'Bebas Neue', cursive;
+    font-size: 2em;
+}
+
+h3{
+    font-family: 'Bebas Neue', cursive;
+    font-size: 2em;
+}
+
+p{
+    font-family: 'Baloo Tammudu 2', cursive;
+}
+
+
+section{
+
+    @include keepInCenter();
+    align-items: center;
+
+    .menuItems_icons{
+
+        li{
+            list-style-type: none;
+        }
+
+        &_button{
+
+            margin: 40px;
+            width: 120px;
+            height: 120px;
+            border: none;
+            background-color: $blackCol;
+
+            img{
+
+                width: 50px;
+
+            }
+        }
+
+    }
+
+}

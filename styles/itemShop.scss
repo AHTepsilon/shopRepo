@@ -110,13 +110,13 @@ section{
                 transform: scale(1.2);
                 cursor: pointer;
 
-                >.section__new_deals_div_product_showcase_text{
+                >.section__new_deals_div_product_showcase_text_itemshop{
                     display: block;
                 }
             }
         }
         
-        &_text{
+        .section__new_deals_div_product_showcase_text_itemshop{
             text-align: left;
             color: #000;
             margin-left: 10px;

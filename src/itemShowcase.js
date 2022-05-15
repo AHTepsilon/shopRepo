@@ -49,7 +49,7 @@ function displayItems(item, shoppingCart, itemsArea){
 
     product.innerHTML = `
     
-    <div class="section__new_deals_div_product_showcase_text">
+    <div class="section__new_deals_div_product_showcase_text_itemshop">
     <h2 class="product_price" id="product_price">${item.price}.00$</h2>
     <p class="product_name" id="product_name">${item.nameValue}</p>
     </div>
