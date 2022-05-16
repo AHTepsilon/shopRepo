@@ -12,6 +12,7 @@ const totalArea = document.getElementById("final_price");
 const proceedButton = document.getElementById("checkout_button_a");
 
 let shoppingCart = [];
+let userHasLoggedIn = undefined;
 
 const db = getFirestore(app);
 const auth = getAuth();
