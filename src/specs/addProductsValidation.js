@@ -1,6 +1,5 @@
-import { doc, onSnapshot, getDoc } from "firebase/firestore";
-import { getAuth, signOut, onAuthStateChanged } from "firebase/auth";
-import { getFirestore } from "firebase/firestore";
+import { doc, getDoc } from "firebase/firestore";
+import { onAuthStateChanged } from "firebase/auth";
 
 function validate(db, auth){
         onAuthStateChanged(auth, (user) => {
