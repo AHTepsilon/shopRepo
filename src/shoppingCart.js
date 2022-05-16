@@ -100,7 +100,7 @@ onAuthStateChanged(auth, async (user) => {
         shoppingCart = getCart();
         alert("Please log in before proceeding to cart");
 
-        window.location.href = "./login.html";
+        window.location.href = "./loginPage.html";
       // User is signed out
       // ...
     }
