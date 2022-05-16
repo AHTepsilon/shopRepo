@@ -2,7 +2,6 @@ import { getFirestore } from "firebase/firestore";
 import {createFirebaseCart, getFirebaseCart} from "./utils/cartFunction";
 import { getAuth, onAuthStateChanged } from "firebase/auth";
 import {app} from "./firebase_app";
-import { initializeApp } from "firebase/app";
 
 import { fetchItems } from "./utils/item";
 
@@ -11,6 +10,8 @@ let userHasLoggedIn = undefined;
 
 const db = getFirestore(app);
 const auth = getAuth();
+
+let cart = [];
 
 async function getItems(db) {
     try {
