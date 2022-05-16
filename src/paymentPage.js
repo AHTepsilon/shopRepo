@@ -13,6 +13,7 @@ const db = getFirestore(app);
 const auth = getAuth();
 
 let cart = [];
+let userHasLoggedIn = undefined;
 
 let fName, lName, mail, add, pNumb, zip;
 let ccNum, ccName, ccDate, ccCode;
