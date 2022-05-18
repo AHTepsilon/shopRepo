@@ -540,6 +540,7 @@ const cartArea = document.getElementById("item_list");
 const totalArea = document.getElementById("final_price");
 const proceedButton = document.getElementById("checkout_button_a");
 let shoppingCart = [];
+let userHasLoggedIn = undefined;
 const db = _firestore.getFirestore(_firebaseApp.app);
 const auth = _auth.getAuth();
 function loadCart(cart) {
@@ -589,7 +590,7 @@ _auth.onAuthStateChanged(auth, async (user)=>{
     } else {
         shoppingCart = _itemShowcase.getCart();
         alert("Please log in before proceeding to cart");
-        window.location.href = "./login.html";
+        window.location.href = "./loginPage.html";
     // User is signed out
     // ...
     }
@@ -33570,12 +33571,12 @@ var _firestore = require("firebase/firestore");
 var _cartFunction = require("./utils/cartFunction");
 var _auth = require("firebase/auth");
 var _firebaseApp = require("./firebase_app");
-var _app = require("firebase/app");
 var _item = require("./utils/item");
 let cartHasProducts;
 let userHasLoggedIn = undefined;
 const db = _firestore.getFirestore(_firebaseApp.app);
 const auth = _auth.getAuth();
+let cart = [];
 async function getItems(db1) {
     try {
         const firebaseProducts = await _item.fetchItems(db1);
@@ -33636,7 +33637,7 @@ _auth.onAuthStateChanged(auth, async (user)=>{
     getItems();
 });
 
-},{"firebase/firestore":"cJafS","./utils/cartFunction":"fRApy","firebase/auth":"drt1f","./firebase_app":"7Nns0","firebase/app":"5wGMN","./utils/item":"8AYBE","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"7Nns0":[function(require,module,exports) {
+},{"firebase/firestore":"cJafS","./utils/cartFunction":"fRApy","firebase/auth":"drt1f","./firebase_app":"7Nns0","./utils/item":"8AYBE","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"7Nns0":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "app", ()=>app
