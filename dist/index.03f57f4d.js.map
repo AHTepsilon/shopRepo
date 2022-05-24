@@ -1,0 +1,1 @@
+{"mappings":"AAAA,SAAS,KAAK,GAAG;IACf,YAAY,CAAC,WAAW,EAAE,YAAY,CAAC,CAAC;CACzC;AAED,SAAS,IAAI,GAAG,EAEf","sources":["anim/sketch.js"],"sourcesContent":["function setup() {\n  createCanvas(windowWidth, windowHeight);\n}\n\nfunction draw() {\n  \n}"],"names":[],"version":3,"file":"index.03f57f4d.js.map","sourceRoot":"/__parcel_source_root/"}

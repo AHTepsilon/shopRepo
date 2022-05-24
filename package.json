@@ -5,7 +5,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "parcel ./*.html --no-cache",
-    "build": "parcel build --public-url ./ ./*.html"
+    "build": "parcel build --public-url ./ ./*.html",
+    "devAnim": "parcel ./anim/index.html --no-cache"
   },
   "repository": {
     "type": "git",
