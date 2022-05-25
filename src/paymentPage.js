@@ -1,14 +1,9 @@
 import { jsPDF } from "jspdf";
-import { getDoc } from "@firebase/firestore";
-import { getAuth, createUserWithEmailAndPassword, onAuthStateChanged } from "firebase/auth";
-import {firebaseConfig, firebase} from "./firebase_app";
+import { getAuth, onAuthStateChanged } from "firebase/auth";
 import {app} from "./firebase_app";
-import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
-import { doc, setDoc, deleteDoc } from "firebase/firestore";
-import {getProduct} from "./utils/getProduct";
-import { validate } from "./specs/addProductsValidation";
-import { getFirebaseCart,  createFirebaseCart} from "./utils/cartFunction";
+import { doc, deleteDoc } from "firebase/firestore";
+import { getFirebaseCart} from "./utils/cartFunction";
 
 const billingInfoForm = document.getElementById("billing_info_div_form");
 const paymentInfoDiv = document.getElementById("payment_info_div_credit_card_form");
@@ -18,6 +13,7 @@ const db = getFirestore(app);
 const auth = getAuth();
 
 let cart = [];
+let userHasLoggedIn = undefined;
 
 let fName, lName, mail, add, pNumb, zip;
 let ccNum, ccName, ccDate, ccCode;

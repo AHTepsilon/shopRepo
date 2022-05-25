@@ -1,4 +1,4 @@
-import { collection, getDocs } from "@firebase/firestore";
+import { collection, getDocs } from "firebase/firestore";
 
 async function getProducts(db){
 

@@ -1,0 +1,52 @@
+section {
+  text-align: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 10% auto auto;
+  display: flex;
+}
+
+section a {
+  margin-top: 60px;
+}
+
+section h2 {
+  margin-bottom: 50px;
+}
+
+section .form_login {
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+}
+
+section .form_login input {
+  height: 25px;
+  width: 250px;
+  border-width: 1px;
+  border-color: #000;
+  border-radius: 10px;
+  margin-top: 2px;
+  margin-bottom: 15px;
+  font-family: "Baloo Tammudu 2", cursive;
+}
+
+section .form_login .submit_button {
+  width: 100px;
+  color: #ffe70c;
+  height: 25px;
+  background-color: #000;
+  border: none;
+  border-radius: 10px;
+  margin: 15px;
+  font-family: "Baloo Tammudu 2", cursive;
+}
+
+section .form_login .submit_button:hover {
+  cursor: pointer;
+  color: #000;
+  background-color: #fff;
+}
+
+/*# sourceMappingURL=loginPage.9310cca9.css.map */

@@ -16,6 +16,8 @@ let filterProductsInstMan = [];
 let filterProductsBodCol = [];
 let filterProducts = [];
 
+let categoryToFilter;
+
 function filterIt(itemsArea, productArr){
 
     filterForm.addEventListener("submit", (ev)=>{
