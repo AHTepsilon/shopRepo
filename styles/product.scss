@@ -48,17 +48,67 @@ p{
 
     margin: 100px;
 
-    .product_image{
+    .product_info{
+        margin-left: 70px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 80%;
+        
+    }
 
-        object-fit: contain;
-        width: 250px;   
-    
+    .product_price{
+        color: $blackCol;
+        font-size: 32px;
+        margin: 10px;
+        font-weight: lighter;
+        padding-bottom: 10px;
+
+    }
+
+    .product_desc{
+        margin: 20px;
     }
 
     .product_name{
-
-
+        color: $blackCol;
+        line-height: 20px;
+        font-size: 3em;
+        margin: 10px;
+        padding-bottom: 10px;
     }
+
+    .buttons{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        margin: 10px;
+
+        .product_cart{
+            width: 150px;
+            background-color: $blackCol;
+            color: $yellowCol;
+            border-radius: 10px;
+            border:  none;
+            
+            font-family: 'Baloo Tammudu 2', cursive;
+            margin: 10px;
+            
+        }
+    
+        .showcase__button{
+            width: 150px;
+            background-color: $yellowCol;
+            color: $blackCol;
+            border-radius: 10px;
+            border-color: $blackCol;
+            font-family: 'Baloo Tammudu 2', cursive;
+            margin: 10px;
+        }
+    }
+    
+    
+
 }
 
 

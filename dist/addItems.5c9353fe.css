@@ -39,13 +39,10 @@
   }
 
   .section__new_deals_div_product_showcase_text_itemshop {
-    background-color: #ffe70c;
-    text-align: left !important;
+    text-align: center !important;
     color: #000 !important;
     margin-left: 10px !important;
     display: block !important;
-    position: relative !important;
-    top: 170px !important;
     bottom: 10px !important;
     left: 30px !important;
   }

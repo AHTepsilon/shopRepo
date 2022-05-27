@@ -65,6 +65,14 @@ nav .navbar__catDeals {
   display: flex;
 }
 
+nav button {
+  color: #ffe70c;
+  background: #000;
+  border: none;
+  font-family: "Baloo Tammudu 2", cursive;
+  font-size: 15px;
+}
+
 nav .navbar_search {
   width: 25em;
   height: 25px;

@@ -97,6 +97,8 @@ p{
     overflow: auto;
     margin-left: auto;
 
+    
+
     &_content{
         display: flex;  
         flex-direction: row;
@@ -124,10 +126,12 @@ p{
     }
 
     &_div_product_showcase{
+
         position: relative;
         display: flex;
         flex-direction: row;
         margin-top: 30px;
+        align-items: center;
 
         &:hover{
 
@@ -163,25 +167,38 @@ p{
         }
 
         .product_price{
-
+            color: $yellowCol;
             font-size: 32px;
-            width: 140px;
+           //width: 140px;
             font-weight: lighter;
 
         }
 
         .product_name{
-
+            color: $yellowCol;
             line-height: 20px;
             width: 220px;
             font-size: 18px;
+            margin: 10px;
+        }
+
+        
+        .add_cart_button{
+            width: 150px;
+            background-color: $yellowCol;
+            color: $blackCol;
+            border-radius: 10px;
+            border:  none;
+            font-family: 'Baloo Tammudu 2', cursive;
+            margin: 10px;
+            
         }
     }
 
     .guitarPhoto{
-        width: 200px;
-        height: 400px;
-        background: linear-gradient(0deg, #000000 0%, rgba(0, 0, 0, 0) 67.98%),
+        width: 100px;
+        height: 200px;
+        //background: linear-gradient(0deg, #000000 0%, rgba(0, 0, 0, 0) 67.98%),
     }
 }
 
@@ -425,6 +442,13 @@ header{
     height: 100px;
     align-items: center;
     justify-content: center;
+    .navbar__addItem__a{
+        background: $blackCol;
+        color: $yellowCol;
+        border: none;
+        font-size: 15px;
+        font-family: 'Baloo Tammudu 2', cursive;;
+    }
 
     .navbar_logo_div{
         &:hover{

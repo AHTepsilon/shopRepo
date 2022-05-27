@@ -72,24 +72,41 @@ section .category_changer_form .submit_button:hover {
   background-color: #ffe70c;
   border: 1px solid #000;
   border-radius: 10px;
-  margin-left: 10px;
+  margin: 10px;
   text-decoration: none;
   display: none;
   position: absolute;
-  top: 290px;
+  bottom: 10px;
   left: 195px;
+  position: relative !important;
 }
 
-.section__new_deals_div_product_showcase .product_price {
+.section__new_deals_div_product_showcase .section__new_deals_div_product_showcase_text_itemshop .product_info {
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+}
+
+.section__new_deals_div_product_showcase .section__new_deals_div_product_showcase_text_itemshop .product_price {
   width: 140px;
   font-size: 32px;
   font-weight: lighter;
 }
 
-.section__new_deals_div_product_showcase .product_name {
+.section__new_deals_div_product_showcase .section__new_deals_div_product_showcase_text_itemshop .product_name {
   width: 220px;
   font-size: 18px;
   line-height: 20px;
+}
+
+.section__new_deals_div_product_showcase .section__new_deals_div_product_showcase_text_itemshop .add_cart_button {
+  width: 150px;
+  color: #ffe70c;
+  background-color: #000;
+  border: none;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  font-family: "Baloo Tammudu 2", cursive;
 }
 
 .guitarPhoto {

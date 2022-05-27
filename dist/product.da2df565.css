@@ -18,9 +18,58 @@ p {
   display: flex;
 }
 
-.product .product_image {
-  object-fit: contain;
-  width: 250px;
+.product .product_info {
+  width: 80%;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 70px;
+  display: flex;
+}
+
+.product .product_price {
+  color: #000;
+  margin: 10px;
+  padding-bottom: 10px;
+  font-size: 32px;
+  font-weight: lighter;
+}
+
+.product .product_desc {
+  margin: 20px;
+}
+
+.product .product_name {
+  color: #000;
+  margin: 10px;
+  padding-bottom: 10px;
+  font-size: 3em;
+  line-height: 20px;
+}
+
+.product .buttons {
+  flex-flow: column;
+  margin: 10px;
+  display: flex;
+}
+
+.product .buttons .product_cart {
+  width: 150px;
+  color: #ffe70c;
+  background-color: #000;
+  border: none;
+  border-radius: 10px;
+  margin: 10px;
+  font-family: "Baloo Tammudu 2", cursive;
+}
+
+.product .buttons .showcase__button {
+  width: 150px;
+  color: #000;
+  background-color: #ffe70c;
+  border-color: #000;
+  border-radius: 10px;
+  margin: 10px;
+  font-family: "Baloo Tammudu 2", cursive;
 }
 
 /*# sourceMappingURL=product.da2df565.css.map */

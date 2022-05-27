@@ -63,15 +63,21 @@ function renderProduct(product){
         <h1 class="product_name">
         ${product.nameValue}
         </h1>
+        
+        <h3 class="product_price">
+        ${product.price}.00$
+
+        
+        </h3>
         <p class="product_desc">
         lorem ipsum
         </p>
-        <h3 class="product_price">
-        ${product.price}.00$
-        </h3>
 
+        <div class= "buttons">
         <button class="showcase__button">Go to showcase</button>
         ${productButtonCart}
+        </div>
+        
 
     `;
 

@@ -98,6 +98,16 @@ nav{
         list-style: none;
     }
 
+    button{
+        
+            background: $blackCol;
+            color: $yellowCol;
+            border: none;
+            font-size: 15px;
+            font-family: 'Baloo Tammudu 2', cursive;;
+        
+    }
+
     .navbar_search{
         width: 25em;
         height: 25px;
