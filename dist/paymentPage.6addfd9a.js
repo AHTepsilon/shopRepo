@@ -7162,14 +7162,14 @@ var Ut2, zt, Ht, Wt = [
     }, t51.loadImageFile = t51.loadFile;
 }(E.API), function(e36) {
     function r26() {
-        return (n.html2canvas ? Promise.resolve(n.html2canvas) : require("431491505384a6c")).catch(function(t) {
+        return (n.html2canvas ? Promise.resolve(n.html2canvas) : require("e6073f25a3531b63")).catch(function(t) {
             return Promise.reject(new Error("Could not load html2canvas: " + t));
         }).then(function(t) {
             return t.default ? t.default : t;
         });
     }
     function i130() {
-        return (n.DOMPurify ? Promise.resolve(n.DOMPurify) : require("39f6010977743598")).catch(function(t) {
+        return (n.DOMPurify ? Promise.resolve(n.DOMPurify) : require("b1e596c63b8364aa")).catch(function(t) {
             return Promise.reject(new Error("Could not load dompurify: " + t));
         }).then(function(t) {
             return t.default ? t.default : t;
@@ -16383,7 +16383,7 @@ function ee(t75) {
  * ====================================================================
  */ function(t91) {
     function e60() {
-        return (n.canvg ? Promise.resolve(n.canvg) : require("d16432e1c18bf9c1")).catch(function(t) {
+        return (n.canvg ? Promise.resolve(n.canvg) : require("ae8d2a04e041ebd6")).catch(function(t) {
             return Promise.reject(new Error("Could not load canvg: " + t));
         }).then(function(t) {
             return t.default ? t.default : t;
@@ -19683,7 +19683,7 @@ E.API.PDFObject = function() {
 }();
 exports.default = E;
 
-},{"@babel/runtime/helpers/typeof":"jgQjt","fflate":"61VnC","431491505384a6c":"8Pwnj","39f6010977743598":"lOQpV","d16432e1c18bf9c1":"cFIR9","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"jgQjt":[function(require,module,exports) {
+},{"@babel/runtime/helpers/typeof":"jgQjt","fflate":"61VnC","e6073f25a3531b63":"8Pwnj","b1e596c63b8364aa":"lOQpV","ae8d2a04e041ebd6":"cFIR9","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"jgQjt":[function(require,module,exports) {
 function _typeof(obj1) {
     return module.exports = _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(obj) {
         return typeof obj;

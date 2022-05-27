@@ -575,6 +575,8 @@ function renderProduct(product) {
         <h3 class="product_price">
         ${product.price}.00$
         </h3>
+
+        <button class="showcase__button">Go to showcase</button>
         ${productButtonCart}
 
     `;
@@ -584,6 +586,11 @@ function renderProduct(product) {
         if (userHasLoggedIn) _cartFunction.createFirebaseCart(db, userHasLoggedIn.uid, cart);
         addToCartButton.setAttribute("disabled", true);
         addToCartButton.innerText = "Product added to cart";
+    });
+    const goShowcase = document.querySelector(".showcase__button");
+    goShowcase.addEventListener("click", (ev)=>{
+        if (product.instrument == "Guitar") window.location.href = "https://ahtepsilon.github.io/virtual_guitar_game/game/index.html";
+        else if (product.instrument == "Bass") window.location.href = "https://ahtepsilon.github.io/virtual_guitar_game/game/bass.html";
     });
 }
 addItemBtn.addEventListener("click", (ev)=>{
